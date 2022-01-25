@@ -1,0 +1,366 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Prototypen - Validierungstool</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Validierungstool</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="methods.html">Methoden</a></li>
+							<li><a href="prototypes.html">Prototypen</a></li>
+							<li><a href="settings.html">Einstellungen</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+                <div id="main">
+                    <div class="inner">
+                        <div id="protDIV">
+                            <form id = "prototype">
+                               <div id="Prot_heading">
+                                   <h1>Prototypen</h1>
+                               </div>
+                             <table id="table2">
+                               <tr style="background-color:black; color:white">
+                               <td>Nr.</td>
+                               <td>Fragstellung</td>
+                               <td>Possible expression</td>
+                              </tr>
+                              <tr>
+                               <td>1</td>
+                               <td>Welche Annahmetyp wird validiert?</td>
+                               <td>
+                                   <div>
+                                   <select multiple id="acceptance_type">
+                                       <option value="Problem">Problem</option>
+                                       <option value="Mehrwehrt">Mehrwehrt</option>
+                                       <option value="Gesamtlösung">Gesamtlösung</option>
+                                       <option value="Produktmerkmale">Produktmerkmale</option>
+                                       <option value="Produkteigenschaften">Produkteigenschaften</option>
+                                       <option value="Preis">Preis</option>
+                                       <option value="Usability">Usability</option>
+                                       <option value="Erlösmechanik">Erlösmechanik</option>
+                                       <option value="technMachbarkeit">Techn. Machbarkeit</option>
+                                       <option value="Leistungserbringung">Leistungserbringung</option>
+                                   </select>
+                                   </div>
+                               </td>
+                              </tr>
+                              <tr>
+                               <td>2</td>
+                               <td>Welche Wertschöpfung bedingtdie Idee?</td>
+                               <td>
+                                   <div>
+                                   <select multiple id="added_value">
+                                       <option value="hardware">Hardware</option>
+                                       <option value="software">Software</option>
+                                       <option value="human">Mensch</option>
+                                   </select>
+                                   </div>
+                               </td>
+                              </tr>
+                              <tr>
+                               <td>3</td>
+                               <td>Welcher Marktleistungstyp wird adressiert?</td>
+                               <td>
+                                   <div>
+                                   <select multiple id="market_service_type">
+                                       <option value="sachleistung">Sachleistung</option>
+                                       <option value="pss">PSS</option>
+                                       <option value="Dienstleistung">Dienstleistung</option>
+                                   </select>
+                                   </div>
+                               </td>
+                              </tr>
+                              <tr>
+                               <td>4</td>
+                               <td>Welche Kompetenzen sind im Teamvorhanden?</td>
+                               <td>
+                                   <div>
+                                   <select multiple id="team_skills">
+                                       <option value="design">Design</option>
+                                       <option value="ux">UX</option>
+                                       <option value="it">IT</option>
+                                       <option value="et">ET</option>
+                                       <option value="mb">MB</option>
+                                       <option value="BusinessAnalysis">BusinessAnalysis</option>
+                                       <option value="marketing">Marketing</option>
+                                   </select>
+                                   </div>
+                               </td>
+                              </tr>
+                              <tr>
+                               <td>5</td>
+                               <td>Existieren bereits Grundlagen zur Erstellung eines Prototypen?</td>
+                               <td>
+                                   <div>
+                                   <select multiple id="basics">
+                                       <option value="basic_no">Keine</option>
+                                       <option value="int_sol">Bestehende interne Lösung</option>
+                                       <option value="own_mark_perf">Bestehendes eigenes Produkt</option>
+                                       <option value="ext_sol">Bestehende externe Lösung</option>
+                                   </select>
+                                   </div>
+                               </td>
+                              </tr>
+                             </table>
+                             
+                             <table id="table3">
+                               <tr style="background-color:black; color:white">
+                               <td>Nr.</td>
+                               <td>Fragstellung</td>
+                               <td>1</td>
+                               <td>2</td>
+                               <td>3</td>
+                               <td>4</td>
+                               <td>5</td>
+                              </tr>
+                              <tr>
+                               <td>6</td>
+                               <td>Wie viel Budget steht für die Entwicklung des Prototypen zur Verfüng?</td>
+                               <td>
+                               <input type="radio" name="Rel_Kosten" value=1>
+                               </td>
+                               <td>
+                               <input type="radio" name="Rel_Kosten" value=2>
+                               </td>
+                               <td>
+                               <input type="radio" name="Rel_Kosten" value=3>
+                               </td>
+                               <td>
+                               <input type="radio" name="Rel_Kosten" value=4> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Rel_Kosten" value=5> 
+                               </td>
+                              </tr>
+                              <tr>
+                               <td>7</td>
+                               <td>Wie viel Zeit ist vorhanden um den Prototypen zu erstellen?</td>
+                               <td>
+                               <input type="radio" name="time" value=1> 
+                               </td>
+                               <td>
+                               <input type="radio" name="time" value=2> 
+                               </td>
+                               <td>
+                               <input type="radio" name="time" value=3> 
+                               </td>
+                               <td>
+                               <input type="radio" name="time" value=4> 
+                               </td>
+                               <td>
+                               <input type="radio" name="time" value=5> 
+                               </td>
+                              </tr>
+                              <tr>
+                               <td>8</td>
+                               <td>Wie gut muss die visuelle Wiedergabetreue sein?</td>
+                               <td>
+                               <input type="radio" name="vis_fid" value=1> 
+                               </td>
+                               <td>
+                               <input type="radio" name="vis_fid" value=2> 
+                               </td>
+                               <td>
+                               <input type="radio" name="vis_fid" value=3> 
+                               </td>
+                               <td>
+                               <input type="radio" name="vis_fid" value=4> 
+                               </td>
+                               <td>
+                               <input type="radio" name="vis_fid" value=5> 
+                               </td>
+                              </tr>
+                              <tr>
+                               <td>9</td>
+                               <td>Wie gut muss die auditive Wiedergabetreue sein?</td>
+                               <td>
+                               <input type="radio" name="aud_fid" value=1> 
+                               </td>
+                               <td>
+                               <input type="radio" name="aud_fid" value=2> 
+                               </td>
+                               <td>
+                               <input type="radio" name="aud_fid" value=3> 
+                               </td>
+                               <td>
+                               <input type="radio" name="aud_fid" value=4> 
+                               </td>
+                               <td>
+                               <input type="radio" name="aud_fid" value=5> 
+                               </td>
+                              </tr>
+                              <tr>
+                               <td>10</td>
+                               <td>Wie gut muss die haptische Wiedergabetreue sein?</td>
+                               <td>
+                               <input type="radio" name="hap_fid" value=1> 
+                               </td>
+                               <td>
+                               <input type="radio" name="hap_fid" value=2> 
+                               </td>
+                               <td>
+                               <input type="radio" name="hap_fid" value=3> 
+                               </td>
+                               <td>
+                               <input type="radio" name="hap_fid" value=4> 
+                               </td>
+                               <td>
+                               <input type="radio" name="hap_fid" value=5> 
+                               </td>
+                              </tr>
+                              <tr>
+                               <td>11</td>
+                               <td>Welche Funktionstiefe muss der Prototyp vorweisen?</td>
+                               <td>
+                               <input type="radio" name="Funktionstiefe" value=1> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Funktionstiefe" value=2> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Funktionstiefe" value=3> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Funktionstiefe" value=4> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Funktionstiefe" value=5> 
+                               </td>
+                              </tr>
+                              <tr>
+                               <td>12</td>
+                               <td>Welche Funktionsumfang muss der Prototyp vorweisen?</td>
+                               <td>
+                               <input type="radio" name="Funktionsumfang" value=1> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Funktionsumfang" value=2> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Funktionsumfang" value=3> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Funktionsumfang" value=4> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Funktionsumfang" value=5> 
+                               </td>
+                              </tr>
+                              <tr>
+                               <td>13</td>
+                               <td>Wie soll das Eingabeverhalten des Prototypen sein (Interaktivität)?</td>
+                               <td>
+                               <input type="radio" name="Eingabeverhalten" value=1>  
+                               </td>
+                               <td>
+                               <input type="radio" name="Eingabeverhalten" value=2> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Eingabeverhalten" value=3> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Eingabeverhalten" value=4> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Eingabeverhalten" value=5> 
+                               </td>
+                              </tr>
+                              <tr>
+                               <td>14</td>
+                               <td>Wie soll das Ausgabeverhalten des Prototypen sein (Interaktivität)</td>
+                               <td>
+                               <input type="radio" name="Ausgabeverhalten" value=1> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Ausgabeverhalten" value=2> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Ausgabeverhalten" value=3> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Ausgabeverhalten" value=4> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Ausgabeverhalten" value=5> 
+                               </td>
+                              </tr>
+                             </table>
+                               <div id="cluster-group-div">
+                                   Cluster-Gruppe: 
+                                   <select multiple id="Cluster">
+                                       <option value="Virtuelle_nicht_funktionale_Gestalt">Virtuelle nicht funktionale Gestalt</option>
+                                       <option value="Physische_nicht_funktionale_Gestalt">Physische nicht funktionale Gestalt</option>
+                                       <option value="Konzeptmodelle">Konzeptmodelle</option>
+                                       <option value="Vertriebs-Simulation">Vertriebs Simulation</option>
+                                       <option value="Fiktionale,erlebbare-Marktleistungs-geschichten">Fiktionale, erlebbare Marktleistungs geschichten</option>
+                                       <option value="FunktionaleMarkleistungs-repräsentationen">Funktionale Markleistungs Repräsentationen</option>
+                                   </select>
+                               </div>
+                            </form>
+                             <div id="myBtnContainer">
+                               <button class="btn" onclick="filterSelection('submit')">Einreichen</button>
+                               <button class="btn active" onclick="clearallprotypes()">Filter löschen</button>
+                             </div>
+                             <div class="add-info">
+                               <h1 class="DisplayMessage" id="Proto_message"> </h1>
+                             </div>
+                             <section class="tiles" id="container_id">
+                             </section>
+                             
+                           </div>
+
+                        <div id="protDIV_EMPTY">  
+                            <button onclick="show_protDIV()">Zuruck</button>
+                        </div>
+                    </div>
+                </div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script> 
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+            <script src="assets/js/common.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	</body>
+</html>
