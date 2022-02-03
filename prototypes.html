@@ -56,38 +56,69 @@
                                <div id="Prot_heading">
                                    <h1>Prototypen</h1>
                                </div>
+                            <table id="table1">
+                                <tr style="background-color:#378805; color:white">
+                                <td>Annahmetyp und Betrachtungs-schwerpunkt</td>
+                                <td>Nützlichkeit</td>
+                                <td>Usability</td>
+                                <td>Begehren</td>
+                                <td>Kaufbereitschaft</td>
+                                <td>Machbarkeit</td>
+                               </tr>
+                               
+                                <div id="acceptance_type_prot">
+                                <tr>
+                                <td>Gesamtlösung</td>
+                                <td>
+                                <input type="checkbox" name="Acc-P" value="G-N-P"> 
+                                </td>
+                                <td>
+                                <input type="checkbox" name="Acc-P" value="G-U-P"> 
+                                </td>
+                                <td>
+                                <input type="checkbox" name="Acc-P" value="G-B-P"> 
+                                </td>
+                                <td>
+                                <input type="checkbox" name="Acc-P" value="G-K-P"> 
+                                </td>
+                                <td>
+                                <input type="checkbox" name="Acc-P" value="G-M-P"> 
+                                </td>
+                               </tr>
+                               <tr>
+                                <td>Eigenschaften</td>
+                                <td>
+                                <input type="checkbox" name="Acc-P" value="E-N-P" > 
+                                </td>
+                                <td>
+                                <input type="checkbox" name="Acc-P" value="E-U-P"> 
+                                </td>
+                                <td>
+                                <input type="checkbox" name="Acc-P" value="E-B-P"> 
+                                </td>
+                                <td>
+                                <input type="checkbox" name="Acc-P" value="E-K-P"> 
+                                </td>
+                                <td>
+                                <input type="checkbox" name="Acc-P" value="E-M-P"> 
+                                </td>
+                                </tr>
+                                </div>
+                            </table>   
+
                              <table id="table2">
-                               <tr style="background-color:black; color:white">
+                               <tr style="background-color:#378805; color:white">
                                <td>Nr.</td>
                                <td>Fragstellung</td>
-                               <td>Possible expression</td>
+                               <td>Mögliche Werte</td>
                               </tr>
+
                               <tr>
                                <td>1</td>
-                               <td>Welche Annahmetyp wird validiert?</td>
-                               <td>
-                                   <div>
-                                   <select multiple id="acceptance_type">
-                                       <option value="Problem">Problem</option>
-                                       <option value="Mehrwehrt">Mehrwehrt</option>
-                                       <option value="Gesamtlösung">Gesamtlösung</option>
-                                       <option value="Produktmerkmale">Produktmerkmale</option>
-                                       <option value="Produkteigenschaften">Produkteigenschaften</option>
-                                       <option value="Preis">Preis</option>
-                                       <option value="Usability">Usability</option>
-                                       <option value="Erlösmechanik">Erlösmechanik</option>
-                                       <option value="technMachbarkeit">Techn. Machbarkeit</option>
-                                       <option value="Leistungserbringung">Leistungserbringung</option>
-                                   </select>
-                                   </div>
-                               </td>
-                              </tr>
-                              <tr>
-                               <td>2</td>
                                <td>Welche Wertschöpfung bedingtdie Idee?</td>
                                <td>
                                    <div>
-                                   <select multiple id="added_value">
+                                   <select multiple id="added_value_prot">
                                        <option value="hardware">Hardware</option>
                                        <option value="software">Software</option>
                                        <option value="human">Mensch</option>
@@ -96,11 +127,11 @@
                                </td>
                               </tr>
                               <tr>
-                               <td>3</td>
+                               <td>2</td>
                                <td>Welcher Marktleistungstyp wird adressiert?</td>
                                <td>
                                    <div>
-                                   <select multiple id="market_service_type">
+                                   <select multiple id="market_service_type_prot">
                                        <option value="sachleistung">Sachleistung</option>
                                        <option value="pss">PSS</option>
                                        <option value="Dienstleistung">Dienstleistung</option>
@@ -109,11 +140,11 @@
                                </td>
                               </tr>
                               <tr>
-                               <td>4</td>
+                               <td>3</td>
                                <td>Welche Kompetenzen sind im Teamvorhanden?</td>
                                <td>
                                    <div>
-                                   <select multiple id="team_skills">
+                                   <select multiple id="team_skills_prot">
                                        <option value="design">Design</option>
                                        <option value="ux">UX</option>
                                        <option value="it">IT</option>
@@ -126,11 +157,11 @@
                                </td>
                               </tr>
                               <tr>
-                               <td>5</td>
+                               <td>4</td>
                                <td>Existieren bereits Grundlagen zur Erstellung eines Prototypen?</td>
                                <td>
                                    <div>
-                                   <select multiple id="basics">
+                                   <select multiple id="basics_prot">
                                        <option value="basic_no">Keine</option>
                                        <option value="int_sol">Bestehende interne Lösung</option>
                                        <option value="own_mark_perf">Bestehendes eigenes Produkt</option>
@@ -142,7 +173,7 @@
                              </table>
                              
                              <table id="table3">
-                               <tr style="background-color:black; color:white">
+                               <tr style="background-color:#378805; color:white">
                                <td>Nr.</td>
                                <td>Fragstellung</td>
                                <td>1</td>
@@ -152,7 +183,7 @@
                                <td>5</td>
                               </tr>
                               <tr>
-                               <td>6</td>
+                               <td>5</td>
                                <td>Wie viel Budget steht für die Entwicklung des Prototypen zur Verfüng?</td>
                                <td>
                                <input type="radio" name="Rel_Kosten" value=1>
@@ -171,7 +202,7 @@
                                </td>
                               </tr>
                               <tr>
-                               <td>7</td>
+                               <td>6</td>
                                <td>Wie viel Zeit ist vorhanden um den Prototypen zu erstellen?</td>
                                <td>
                                <input type="radio" name="time" value=1> 
@@ -190,7 +221,7 @@
                                </td>
                               </tr>
                               <tr>
-                               <td>8</td>
+                               <td>7</td>
                                <td>Wie gut muss die visuelle Wiedergabetreue sein?</td>
                                <td>
                                <input type="radio" name="vis_fid" value=1> 
@@ -209,7 +240,7 @@
                                </td>
                               </tr>
                               <tr>
-                               <td>9</td>
+                               <td>8</td>
                                <td>Wie gut muss die auditive Wiedergabetreue sein?</td>
                                <td>
                                <input type="radio" name="aud_fid" value=1> 
@@ -228,7 +259,7 @@
                                </td>
                               </tr>
                               <tr>
-                               <td>10</td>
+                               <td>9</td>
                                <td>Wie gut muss die haptische Wiedergabetreue sein?</td>
                                <td>
                                <input type="radio" name="hap_fid" value=1> 
@@ -247,7 +278,7 @@
                                </td>
                               </tr>
                               <tr>
-                               <td>11</td>
+                               <td>10</td>
                                <td>Welche Funktionstiefe muss der Prototyp vorweisen?</td>
                                <td>
                                <input type="radio" name="Funktionstiefe" value=1> 
@@ -266,7 +297,7 @@
                                </td>
                               </tr>
                               <tr>
-                               <td>12</td>
+                               <td>11</td>
                                <td>Welche Funktionsumfang muss der Prototyp vorweisen?</td>
                                <td>
                                <input type="radio" name="Funktionsumfang" value=1> 
@@ -285,7 +316,7 @@
                                </td>
                               </tr>
                               <tr>
-                               <td>13</td>
+                               <td>12</td>
                                <td>Wie soll das Eingabeverhalten des Prototypen sein (Interaktivität)?</td>
                                <td>
                                <input type="radio" name="Eingabeverhalten" value=1>  
@@ -304,7 +335,7 @@
                                </td>
                               </tr>
                               <tr>
-                               <td>14</td>
+                               <td>13</td>
                                <td>Wie soll das Ausgabeverhalten des Prototypen sein (Interaktivität)</td>
                                <td>
                                <input type="radio" name="Ausgabeverhalten" value=1> 
@@ -323,26 +354,34 @@
                                </td>
                               </tr>
                              </table>
-                               <div id="cluster-group-div">
-                                   Cluster-Gruppe: 
-                                   <select multiple id="Cluster">
-                                       <option value="Virtuelle_nicht_funktionale_Gestalt">Virtuelle nicht funktionale Gestalt</option>
-                                       <option value="Physische_nicht_funktionale_Gestalt">Physische nicht funktionale Gestalt</option>
-                                       <option value="Konzeptmodelle">Konzeptmodelle</option>
-                                       <option value="Vertriebs-Simulation">Vertriebs Simulation</option>
-                                       <option value="Fiktionale,erlebbare-Marktleistungs-geschichten">Fiktionale, erlebbare Marktleistungs geschichten</option>
-                                       <option value="FunktionaleMarkleistungs-repräsentationen">Funktionale Markleistungs Repräsentationen</option>
-                                   </select>
-                               </div>
+                             <table id="table4">
+                                <tr> 
+                                <td style="background-color:#378805; color:white">Cluster-Gruppe</td>
+                                <td>
+                                <select multiple id="Cluster_prot">
+                                    <option value="Virtuelle_nicht_funktionale_Gestalt">Virtuelle nicht funktionale Gestalt</option>
+                                    <option value="Physische_nicht_funktionale_Gestalt">Physische nicht funktionale Gestalt</option>
+                                    <option value="Konzeptmodelle">Konzeptmodelle</option>
+                                    <option value="Vertriebs-Simulation">Vertriebs Simulation</option>
+                                    <option value="Fiktionale,erlebbare-Marktleistungs-geschichten">Fiktionale, erlebbare Marktleistungs geschichten</option>
+                                    <option value="FunktionaleMarkleistungs-repräsentationen">Funktionale Markleistungs Repräsentationen</option>
+                                </select>
+                                </td>
+                                </tr>
+                                </table> 
                             </form>
-                             <div id="myBtnContainer">
-                               <button class="btn" onclick="filterSelection('submit')">Einreichen</button>
-                               <button class="btn active" onclick="clearallprotypes()">Filter löschen</button>
-                             </div>
+
+                            <div id="myBtnContainer">
+                                <button class="btn" onclick="filterSelection_proto('submit')">Einreichen</button>
+                                <button class="btn" onclick="show_all()">Alles Zeigen</button>
+                                <button class="btn active" onclick="clearallprotypes()">Filter löschen</button>
+                            </div>
+                            
                              <div class="add-info">
                                <h1 class="DisplayMessage" id="Proto_message"> </h1>
                              </div>
                              <section class="tiles" id="container_id">
+                    
                              </section>
                              
                            </div>
@@ -359,7 +398,7 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-            <script src="assets/js/common.js"></script>
+            <script src="assets/js/prototypes.js"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 	</body>

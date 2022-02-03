@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<!--
+	Validierungstool by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Validierungstool</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Validierungstool</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="methods.html">Methoden</a></li>
+							<li><a href="prototypes.html">Prototypen</a></li>
+							<li><a href="settings.html">Einstellungen</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+				<div id="main">
+                    <div class="inner">
+
+					<table id="prot_settings">
+						<tr style="background-color:#003B6D; color:white"> 
+							<td>Prototypen</td>
+							<td>Gewicht</td>
+						</tr>
+						<tr>
+						<td>
+							<label>Budget:</label>
+						</td>
+						<td>
+							<input type="range" id="Budget_Prot" name="Budget_Prot" min="0" max="100"><label>Value: <span id="demo_Budget_Prot"></span></label>
+						</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Zeit:</label>
+							</td>
+							<td>
+								<input type="range" id="Zeit_Prot" name="Zeit_Prot" min="0" max="100"><label>Value: <span id="demo_Zeit_Prot"></span></label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Visuelle Wiedergabetreue:</label>
+							</td>
+							<td>
+								<input type="range" id="VisFid_Prot" name="VisFid_Prot" min="0" max="100"><label>Value: <span id="demo_VisFid_Prot"></span></label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Auditive Wiedergabetreue:</label>
+							</td>
+							<td>
+								<input type="range" id="AudFid_Prot" name="AudFid_Prot" min="0" max="100"><label>Value: <span id="demo_AudFid_Prot"></span></label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Haptische Wiedergabetreue:</label>
+							</td>
+							<td>
+								<input type="range" id="HapFid_Prot" name="HapFid_Prot" min="0" max="100"><label>Value: <span id="demo_HapFid_Prot"></span></label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Funktionstiefe:</label>
+							</td>
+							<td>
+								<input type="range" id="Funktionstiefe" name="Funktionstiefe" min="0" max="100"><label>Value: <span id="demo_Funktionstiefe"></span></label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Funktionsumfang:</label>
+							</td>
+							<td>
+								<input type="range" id="Funktionsumfang" name="Funktionsumfang" min="0" max="100"><label>Value: <span id="demo_Funktionsumfang"></span></label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Eingabeverhalten:</label>
+							</td>
+							<td>
+								<input type="range" id="Eingabeverhalten" name="Eingabeverhalten" min="0" max="100"><label>Value: <span id="demo_Eingabeverhalten"></span></label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Ausgabeverhalten:</label>
+							</td>
+							<td>
+								<input type="range" id="Ausgabeverhalten" name="Ausgabeverhalten" min="0" max="100"><label>Value: <span id="demo_Ausgabeverhalten"></span></label>
+							</td>
+						</tr>
+					</table>
+					<button onclick="save_settings()">Änderungen speichern</button>
+					</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/settings.js"></script>
+	</body>
+</html>

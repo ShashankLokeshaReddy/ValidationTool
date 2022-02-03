@@ -51,335 +51,334 @@
 				<!-- Main -->
                 <div id="main">
                     <div class="inner">
-                        <form id = "prototype">
-                        <div id="Prot_heading">
-                            <h1>Methoden</h1>
+                        <div id="methDIV">
+                            <form id = "methotype">
+                               <div id="Meth_heading">
+                                   <h1>Methoden</h1>
+                               </div>
+                            <table id="table1">
+                                <tr style="background-color:#003B6D; color:white">
+                                <td>Annahmetyp und Betrachtungs-schwerpunkt</td>
+                                <td>Nützlichkeit</td>
+                                <td>Usability</td>
+                                <td>Begehren</td>
+                                <td>Kaufbereitschaft</td>
+                                <td>Machbarkeit</td>
+                               </tr>
+                               
+                                <div id="acceptance_type_meth">
+                                <tr>
+                                <td>Gesamtlösung</td>
+                                <td>
+                                <input type="checkbox" name="Acc-M" value="G-N-M"> 
+                                </td>
+                                <td>
+                                <input type="checkbox" name="Acc-M" value="G-U-M"> 
+                                </td>
+                                <td>
+                                <input type="checkbox" name="Acc-M" value="G-B-M"> 
+                                </td>
+                                <td>
+                                <input type="checkbox" name="Acc-M" value="G-K-M"> 
+                                </td>
+                                <td>
+                                <input type="checkbox" name="Acc-M" value="G-M-M"> 
+                                </td>
+                               </tr>
+                               <tr>
+                                <td>Eigenschaften</td>
+                                <td>
+                                <input type="checkbox" name="Acc-M" value="E-N-M" > 
+                                </td>
+                                <td>
+                                <input type="checkbox" name="Acc-M" value="E-U-M"> 
+                                </td>
+                                <td>
+                                <input type="checkbox" name="Acc-M" value="E-B-M"> 
+                                </td>
+                                <td>
+                                <input type="checkbox" name="Acc-M" value="E-K-M"> 
+                                </td>
+                                <td>
+                                <input type="checkbox" name="Acc-M" value="E-M-M"> 
+                                </td>
+                                </tr>
+                                </div>
+                            </table>   
+
+                             <table id="table2">
+                               <tr style="background-color:#003B6D; color:white">
+                               <td>Nr.</td>
+                               <td>Fragstellung</td>
+                               <td>Mögliche Werte</td>
+                              </tr>
+
+                              <tr>
+                               <td>1</td>
+                               <td>Welchen Datentyp hat die Validierungsmethode?</td>
+                               <td>
+                                   <div>
+                                   <select multiple id="Datentyp_Meth">
+                                       <option value="Qualitativ">Qualitativ</option>
+                                       <option value="Quantitativ">Quantitativ</option>
+                                   </select>
+                                   </div>
+                               </td>
+                              </tr>
+                              <tr>
+                               <td>2</td>
+                               <td>Wo findet die Validierung statt?</td>
+                               <td>
+                                   <div>
+                                   <select multiple id="Umgebung">
+                                       <option value="RealField">Real Feld</option>
+                                       <option value="TestField">Test Field</option>
+                                       <option value="Lab">Labor</option>
+                                       <option value="Virtuell">Virtuell</option>
+                                   </select>
+                                   </div>
+                               </td>
+                              </tr>
+                              <tr>
+                               <td>3</td>
+                               <td>Was ist die Datenquelle?</td>
+                               <td>
+                                   <div>
+                                   <select multiple id="Datenquelle">
+                                       <option value="Primär">Primär</option>
+                                       <option value="Sekundär">Sekundär</option>
+                                   </select>
+                                   </div>
+                               </td>
+                              </tr>
+                              <tr>
+                               <td>4</td>
+                               <td>Was ist das Befragungsform?</td>
+                               <td>
+                                   <div>
+                                   <select multiple id="Befragungsform">
+                                       <option value="Schriftlich">Schriftlich</option>
+                                       <option value="Persönlich">Persönlich</option>
+                                       <option value="Telefonisch">Telefonisch</option>
+                                       <option value="Online">Online</option>
+                                       <option value="Datenbasiert">Datenbasiert</option>
+                                   </select>
+                                   </div>
+                               </td>
+                              </tr>
+                              <tr>
+                                <td>5</td>
+                                <td>was ist die form der kundenintegration?</td>
+                                <td>
+                                    <div>
+                                    <select multiple id="kundenintegration">
+                                        <option value="Direkt">Direkt</option>
+                                        <option value="Indirekt">Indirekt</option>
+                                    </select>
+                                    </div>
+                                </td>
+                               </tr>
+                               <tr>
+                                <td>6</td>
+                                <td>was ist die form der Entwicklerintegration?</td>
+                                <td>
+                                    <div>
+                                    <select multiple id="Entwicklerintegration">
+                                        <option value="Direkt">Direkt</option>
+                                        <option value="Indirekt">Indirekt</option>
+                                    </select>
+                                    </div>
+                                </td>
+                               </tr>
+                               <tr>
+                                <td>7</td>
+                                <td>Was ist der Zielmarkt?</td>
+                                <td>
+                                    <div>
+                                    <select multiple id="Zielmarkt">
+                                        <option value="B2B">B2B</option>
+                                        <option value="B2C">B2C</option>
+                                    </select>
+                                    </div>
+                                </td>
+                               </tr>
+                               <tr>
+                                <td>8</td>
+                                <td>Wie hoch ist der Detaillierungsgrad?</td>
+                                <td>
+                                    <div>
+                                    <select multiple id="Detaillierungsgrad">
+                                        <option value="AllgemeineInformation">Allgemeine Information</option>
+                                        <option value="SpezifischeInformation">Spezifische Information</option>
+                                    </select>
+                                    </div>
+                                </td>
+                               </tr>
+                               <tr>
+                                <td>9</td>
+                                <td>Wie wird die Informationssuche durchgeführt??</td>
+                                <td>
+                                    <div>
+                                    <select multiple id="Informationssuche">
+                                        <option value="Informell">Informell</option>
+                                        <option value="Strukturiert">Strukturiert</option>
+                                    </select>
+                                    </div>
+                                </td>
+                               </tr>
+                             </table>
+                             
+                             <table id="table3">
+                               <tr style="background-color:#003B6D; color:white">
+                               <td>Nr.</td>
+                               <td>Fragstellung</td>
+                               <td>1</td>
+                               <td>2</td>
+                               <td>3</td>
+                               <td>4</td>
+                               <td>5</td>
+                              </tr>
+                              <tr>
+                               <td>10</td>
+                               <td>Wie viel Budget steht für die Durchführung der Methode zur Verfügung??</td>
+                               <td>
+                               <input type="radio" name="Rel_Kosten_Method" value=1>
+                               </td>
+                               <td>
+                               <input type="radio" name="Rel_Kosten_Method" value=2>
+                               </td>
+                               <td>
+                               <input type="radio" name="Rel_Kosten_Method" value=3>
+                               </td>
+                               <td>
+                               <input type="radio" name="Rel_Kosten_Method" value=4> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Rel_Kosten_Method" value=5> 
+                               </td>
+                              </tr>
+                              <tr>
+                               <td>11</td>
+                               <td>Wie ist die Vorbereitungszeit?</td>
+                               <td>
+                               <input type="radio" name="PreparationTime_Method" value=1> 
+                               </td>
+                               <td>
+                               <input type="radio" name="PreparationTime_Method" value=2> 
+                               </td>
+                               <td>
+                               <input type="radio" name="PreparationTime_Method" value=3> 
+                               </td>
+                               <td>
+                               <input type="radio" name="PreparationTime_Method" value=4> 
+                               </td>
+                               <td>
+                               <input type="radio" name="PreparationTime_Method" value=5> 
+                               </td>
+                              </tr>
+                              <tr>
+                               <td>12</td>
+                               <td>Wie ist die Ausführungszeit?</td>
+                               <td>
+                               <input type="radio" name="ExecutionTime_Method" value=1> 
+                               </td>
+                               <td>
+                               <input type="radio" name="ExecutionTime_Method" value=2> 
+                               </td>
+                               <td>
+                               <input type="radio" name="ExecutionTime_Method" value=3> 
+                               </td>
+                               <td>
+                               <input type="radio" name="ExecutionTime_Method" value=4> 
+                               </td>
+                               <td>
+                               <input type="radio" name="ExecutionTime_Method" value=5> 
+                               </td>
+                              </tr>
+                              <tr>
+                               <td>13</td>
+                               <td>Wie viele Personen werden für die Validierung benötigt?</td>
+                               <td>
+                               <input type="radio" name="Personananzahl" value=1> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Personananzahl" value=2> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Personananzahl" value=3> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Personananzahl" value=4> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Personananzahl" value=5> 
+                               </td>
+                              </tr>
+                              <tr>
+                               <td>14</td>
+                               <td>Wie hoch ist die Evidenz?</td>
+                               <td>
+                               <input type="radio" name="Evidenz" value=1> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Evidenz" value=2> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Evidenz" value=3> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Evidenz" value=4> 
+                               </td>
+                               <td>
+                               <input type="radio" name="Evidenz" value=5> 
+                               </td>
+                              </tr>
+  
+                             </table>
+                             <table id="table4">
+                                <tr> 
+                                <td style="background-color:#003B6D; color:white">Cluster-Gruppe-Methode</td>
+                                <td>
+                                <select multiple id="Cluster_meth">
+                                    <option value="Beobachtung">Beobachtung</option>
+                                    <option value="Befragung">Befragung</option>
+                                    <option value="Experiment">Experiment</option>
+                                    <option value="Verhaltensdaten">Verhaltensdaten</option>
+                                </select>
+                                </td>
+                                </tr>
+                                </table> 
+                            </form>
+
+                            <div id="myBtnContainer-meth">
+                                <button class="btn" onclick="filterSelection_meth('submit')">Einreichen</button>
+                                <button class="btn" onclick="show_all_methods()">Alles Zeigen</button>
+                                <button class="btn active" onclick="clearallmethods()">Filter löschen</button>
+                            </div>
+                            
+                             <div class="add-info-meth">
+                               <h1 class="DisplayMessage" id="Meth_message"> </h1>
+                             </div>
+                             <section class="tiles" id="container_id_meth">
+                    
+                             </section>
+                             
+                           </div>
+
+                        <div id="methDIV_EMPTY">  
+                            <button onclick="show_methDIV()">Zuruck</button>
                         </div>
-                        <table id="table2">
-                        <tr style="background-color:black; color:white">
-                        <td>Nr.</td>
-                        <td>Fragstellung</td>
-                        <td>Possible expression</td>
-                        </tr>
-                        <tr>
-                        <td>1</td>
-                        <td>Welche Annahmetyp wird validiert?</td>
-                        <td>
-                            <div>
-                            <select multiple id="acceptance_type">
-                                <option value="Problem">Problem</option>
-                                <option value="Mehrwehrt">Mehrwehrt</option>
-                                <option value="Gesamtlösung">Gesamtlösung</option>
-                                <option value="Produktmerkmale">Produktmerkmale</option>
-                                <option value="Produkteigenschaften">Produkteigenschaften</option>
-                                <option value="Preis">Preis</option>
-                                <option value="Usability">Usability</option>
-                                <option value="Erlösmechanik">Erlösmechanik</option>
-                                <option value="technMachbarkeit">Techn. Machbarkeit</option>
-                                <option value="Leistungserbringung">Leistungserbringung</option>
-                            </select>
-                            </div>
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>2</td>
-                        <td>Welche Wertschöpfung bedingtdie Idee?</td>
-                        <td>
-                            <div>
-                            <select multiple id="added_value">
-                                <option value="hardware">Hardware</option>
-                                <option value="software">Software</option>
-                                <option value="human">Mensch</option>
-                            </select>
-                            </div>
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>3</td>
-                        <td>Welcher Marktleistungstyp wird adressiert?</td>
-                        <td>
-                            <div>
-                            <select multiple id="market_service_type">
-                                <option value="sachleistung">Sachleistung</option>
-                                <option value="pss">PSS</option>
-                                <option value="Dienstleistung">Dienstleistung</option>
-                            </select>
-                            </div>
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>4</td>
-                        <td>Welche Kompetenzen sind im Teamvorhanden?</td>
-                        <td>
-                            <div>
-                            <select multiple id="team_skills">
-                                <option value="design">Design</option>
-                                <option value="ux">UX</option>
-                                <option value="it">IT</option>
-                                <option value="et">ET</option>
-                                <option value="mb">MB</option>
-                                <option value="BusinessAnalysis">BusinessAnalysis</option>
-                                <option value="marketing">Marketing</option>
-                            </select>
-                            </div>
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>5</td>
-                        <td>Existieren bereits Grundlagen zur Erstellung eines Prototypen?</td>
-                        <td>
-                            <div>
-                            <select multiple id="basics">
-                                <option value="basic_no">Keine</option>
-                                <option value="int_sol">Bestehende interne Lösung</option>
-                                <option value="own_mark_perf">Bestehendes eigenes Produkt</option>
-                                <option value="ext_sol">Bestehende externe Lösung</option>
-                            </select>
-                            </div>
-                        </td>
-                        </tr>
-                        </table>
-                        
-                        <table id="table3">
-                        <tr style="background-color:black; color:white">
-                        <td>Nr.</td>
-                        <td>Fragstellung</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>Nicht Sicher</td>
-                        </tr>
-                        <tr>
-                        <td>6</td>
-                        <td>Wie viel Budget steht für die Entwicklung des Prototypen zur Verfüng?</td>
-                        <td>
-                        <input type="radio" name="Rel_Kosten" value=1>
-                        </td>
-                        <td>
-                        <input type="radio" name="Rel_Kosten" value=2>
-                        </td>
-                        <td>
-                        <input type="radio" name="Rel_Kosten" value=3>
-                        </td>
-                        <td>
-                        <input type="radio" name="Rel_Kosten" value=4> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Rel_Kosten" value=5> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Rel_Kosten" value=[1,2,3,4,5] checked> 
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>7</td>
-                        <td>Wie viel Zeit ist vorhanden um den Prototypen zu erstellen?</td>
-                        <td>
-                        <input type="radio" name="time" value=1> 
-                        </td>
-                        <td>
-                        <input type="radio" name="time" value=2> 
-                        </td>
-                        <td>
-                        <input type="radio" name="time" value=3> 
-                        </td>
-                        <td>
-                        <input type="radio" name="time" value=4> 
-                        </td>
-                        <td>
-                        <input type="radio" name="time" value=5> 
-                        </td>
-                        <td>
-                        <input type="radio" name="time" value=[1,2,3,4,5] checked> 
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>8</td>
-                        <td>Wie gut muss die visuelle Wiedergabetreue sein?</td>
-                        <td>
-                        <input type="radio" name="vis_fid" value=1> 
-                        </td>
-                        <td>
-                        <input type="radio" name="vis_fid" value=2> 
-                        </td>
-                        <td>
-                        <input type="radio" name="vis_fid" value=3> 
-                        </td>
-                        <td>
-                        <input type="radio" name="vis_fid" value=4> 
-                        </td>
-                        <td>
-                        <input type="radio" name="vis_fid" value=5> 
-                        </td>
-                        <td>
-                        <input type="radio" name="vis_fid" value=[1,2,3,4,5] checked> 
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>9</td>
-                        <td>Wie gut muss die auditive Wiedergabetreue sein?</td>
-                        <td>
-                        <input type="radio" name="aud_fid" value=1> 
-                        </td>
-                        <td>
-                        <input type="radio" name="aud_fid" value=2> 
-                        </td>
-                        <td>
-                        <input type="radio" name="aud_fid" value=3> 
-                        </td>
-                        <td>
-                        <input type="radio" name="aud_fid" value=4> 
-                        </td>
-                        <td>
-                        <input type="radio" name="aud_fid" value=5> 
-                        </td>
-                        <td>
-                        <input type="radio" name="aud_fid" value=[1,2,3,4,5] checked> 
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>10</td>
-                        <td>Wie gut muss die haptische Wiedergabetreue sein?</td>
-                        <td>
-                        <input type="radio" name="hap_fid" value=1> 
-                        </td>
-                        <td>
-                        <input type="radio" name="hap_fid" value=2> 
-                        </td>
-                        <td>
-                        <input type="radio" name="hap_fid" value=3> 
-                        </td>
-                        <td>
-                        <input type="radio" name="hap_fid" value=4> 
-                        </td>
-                        <td>
-                        <input type="radio" name="hap_fid" value=5> 
-                        </td>
-                        <td>
-                        <input type="radio" name="hap_fid" value=[1,2,3,4,5] checked> 
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>11</td>
-                        <td>Welche Funktionstiefe muss der Prototyp vorweisen?</td>
-                        <td>
-                        <input type="radio" name="Funktionstiefe" value=1> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Funktionstiefe" value=2> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Funktionstiefe" value=3> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Funktionstiefe" value=4> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Funktionstiefe" value=5> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Funktionstiefe" value=[1,2,3,4,5] checked> 
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>12</td>
-                        <td>Welche Funktionsumfang muss der Prototyp vorweisen?</td>
-                        <td>
-                        <input type="radio" name="Funktionsumfang" value=1> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Funktionsumfang" value=2> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Funktionsumfang" value=3> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Funktionsumfang" value=4> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Funktionsumfang" value=5> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Funktionsumfang" value=[1,2,3,4,5] checked> 
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>13</td>
-                        <td>Wie soll das Eingabeverhalten des Prototypen sein (Interaktivität)?</td>
-                        <td>
-                        <input type="radio" name="Eingabeverhalten" value=1>  
-                        </td>
-                        <td>
-                        <input type="radio" name="Eingabeverhalten" value=2> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Eingabeverhalten" value=3> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Eingabeverhalten" value=4> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Eingabeverhalten" value=5> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Eingabeverhalten" value=[1,2,3,4,5] checked> 
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>14</td>
-                        <td>Wie soll das Ausgabeverhalten des Prototypen sein (Interaktivität)</td>
-                        <td>
-                        <input type="radio" name="Ausgabeverhalten" value=1> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Ausgabeverhalten" value=2> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Ausgabeverhalten" value=3> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Ausgabeverhalten" value=4> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Ausgabeverhalten" value=5> 
-                        </td>
-                        <td>
-                        <input type="radio" name="Ausgabeverhalten" value=[1,2,3,4,5] checked> 
-                        </td>
-                        </tr>
-                        </table>
-                        <div id="cluster-group-div">
-                            Cluster-Gruppe: 
-                            <select multiple id="Cluster">
-                                <option value="Virtuelle_nicht_funktionale_Gestalt">Virtuelle nicht funktionale Gestalt</option>
-                                <option value="Physische_nicht_funktionale_Gestalt">Physische nicht funktionale Gestalt</option>
-                                <option value="Konzeptmodelle">Konzeptmodelle</option>
-                                <option value="Vertriebs-Simulation">Vertriebs Simulation</option>
-                                <option value="Fiktionale,erlebbare-Marktleistungs-geschichten">Fiktionale, erlebbare Marktleistungs geschichten</option>
-                                <option value="FunktionaleMarkleistungs-repräsentationen">Funktionale Markleistungs Repräsentationen</option>
-                            </select>
-                        </div>
-                            <div id="myBtnContainer">
-                                <button class="btn" onclick="filterSelection('submit')">Einreichen</button>
-                                <button class="btn active" onclick="clearallprotypes()">Filter löschen</button>
-                            </div>
-                            <div class="add-info">
-                                <h1 class="DisplayMessage" id="Proto_message"> </h1>
-                            </div>
-                            <div class="container" id="container_id">
-                            </div>
-                        </form>
                     </div>
                 </div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.min.js"></script> 
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+            <script src="assets/js/methods.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 	</body>
 </html>
