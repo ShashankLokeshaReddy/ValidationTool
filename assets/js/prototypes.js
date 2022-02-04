@@ -67,7 +67,7 @@ if (c == "submit") {
       score = score + penalty;
     }
     for (k = 0; k < filters.length; k++) {
-      if(prot_arr[i][filters[k]] == no && prot_arr_values.includes(filters[k])){
+      if(prot_arr[i][filters[k]] == "no" && prot_arr_values.includes(filters[k])){
         score = score + penalty;
       }
       else{
