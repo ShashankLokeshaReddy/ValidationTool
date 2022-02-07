@@ -44,7 +44,7 @@ if (c == "submit") {
   });
   var a_t = Array.from(a_t_options).map(({ value }) => value);
   var a_v_options = document.getElementById('added_value_prot').selectedOptions;
-  var a_v = Array.from(a_v_options).map(({ value }) => value);
+  var a_v = a_v_options;
   var mst_options = document.getElementById('market_service_type_prot').selectedOptions;
   var mst = Array.from(mst_options).map(({ value }) => value);
   var ts_options = document.getElementById('team_skills_prot').selectedOptions;
