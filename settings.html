@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Validierungstool</title>
+		<title>Einstellungen - Validierungstool</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -53,7 +53,7 @@
                     <div class="inner">
 
 					<table id="prot_settings">
-						<tr style="background-color:#003B6D; color:white"> 
+						<tr style="background-color:#378805; color:white"> 
 							<td>Prototypen</td>
 							<td>Gewicht</td>
 						</tr>
@@ -130,8 +130,15 @@
 							</td>
 						</tr>
 					</table>
-					<button onclick="save_settings()">Änderungen speichern</button>
+					<div id="mySetContainer-meth">
+						<button onclick="save_settings()">Änderungen speichern</button>
+						<button onclick="reset_settings()">Zurücksetzen</button>
 					</div>
+					
+					 <div class="add-info-Setting">
+					   <h1 class="DisplayMessageSetting" id="Setting_message"> </h1>
+					 </div>	
+				</div>
 			</div>
 
 		<!-- Scripts -->

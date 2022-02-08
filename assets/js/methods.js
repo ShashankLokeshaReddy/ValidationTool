@@ -1,4 +1,12 @@
 $(document).ready(function(){
+  $.getJSON("assets/json/settings.json", function(data){
+    settings_meth = [data[1]["Budget_Meth"],data[1]["Prep_Time_Meth"],data[1]["Exec_Time_Meth"],data[1]["People-needed_Meth"],data[1]["Evidence_Meth"]]; 
+  }).fail(function(){
+      console.log("An error has occurred while fetching method settings.");
+  });
+});
+
+$(document).ready(function(){
     $.getJSON("assets/json/methods.json", function(data){
         meth_arr = data; 
     }).fail(function(){
@@ -81,22 +89,22 @@ if (c == "submit") {
     for (k = 0; k < non_filters.length; k++) {
       if(document.querySelector(`input[name = ${non_filters[k]}]:checked`) && Array.isArray(meth_arr[i][non_filters[k]]) == false){
         if(meth_arr[i][non_filters[k]] == document.querySelector(`input[name = ${non_filters[k]}]:checked`).value){
-          score = score + reward_meth_nonfilters; // full reward
+          score = score + (reward_meth_nonfilters*settings_meth[k]); // full reward
         }
         else if((meth_arr[i][non_filters[k]] - 1 == document.querySelector(`input[name = ${non_filters[k]}]:checked`).value) || (meth_arr[i][non_filters[k]] + 1 == document.querySelector(`input[name = ${non_filters[k]}]:checked`).value)){
-          score = score + (reward_meth_nonfilters / 2); // half reward
+          score = score + (reward_meth_nonfilters*settings_meth[k] / 2); // half reward
         }
         else{
           score = score + penalty_meth; // penalty_meth
         }
       }
       else if(! document.querySelector(`input[name = ${non_filters[k]}]:checked`)){
-        score = score + reward_meth_nonfilters;
+        score = score + (reward_meth_nonfilters*settings_meth[k]);
       }
       else{
         for (l = 0; l < document.querySelector(`input[name = ${non_filters[k]}]`).length; l++) {
           if(meth_arr[i][non_filters[k]][l] == document.querySelector(`input[name = ${non_filters[k]}]:checked`).value){
-            score = score + reward_meth_nonfilters;
+            score = score + (reward_meth_nonfilters*settings_meth[k]);
           }
         }
       }

@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $.getJSON("assets/json/settings.json", function(data){
-    settings_prot = data[0]; 
+    settings_prot = [data[0]["Budget_Prot"],data[0]["Zeit_Prot"],data[0]["VisFid_Prot"],data[0]["AudFid_Prot"],data[0]["HapFid_Prot"],data[0]["Funktionstiefe"],data[0]["Funktionsumfang"],data[0]["Eingabeverhalten"],data[0]["Ausgabeverhalten"]]; 
   }).fail(function(){
       console.log("An error has occurred while fetching prototype settings.");
   });
@@ -15,8 +15,6 @@ $(document).ready(function(){
 });
 
 let suggested_proto_array = [];
-var yes = '&#9989;';
-var no = '&#10060;';
 var empt_prot = document.getElementById("protDIV_EMPTY");
 empt_prot.style.display = "none";
 reward_nonfilters = 10;
@@ -42,9 +40,9 @@ if (c == "submit") {
   $("input:checkbox[name=Acc-P]:checked").each(function(){
     a_t_options.push($(this).val());
   });
-  var a_t = Array.from(a_t_options).map(({ value }) => value);
+  var a_t = a_t_options;
   var a_v_options = document.getElementById('added_value_prot').selectedOptions;
-  var a_v = a_v_options;
+  var a_v = Array.from(a_v_options).map(({ value }) => value);
   var mst_options = document.getElementById('market_service_type_prot').selectedOptions;
   var mst = Array.from(mst_options).map(({ value }) => value);
   var ts_options = document.getElementById('team_skills_prot').selectedOptions;
@@ -78,22 +76,22 @@ if (c == "submit") {
     for (k = 0; k < non_filters.length; k++) {
       if(document.querySelector(`input[name = ${non_filters[k]}]:checked`) && Array.isArray(prot_arr[i][non_filters[k]]) == false){
         if(prot_arr[i][non_filters[k]] == document.querySelector(`input[name = ${non_filters[k]}]:checked`).value){
-          score = score + (reward_nonfilters); // full reward
+          score = score + (reward_nonfilters*settings_prot[k]); // full reward
         }
         else if((prot_arr[i][non_filters[k]] - 1 == document.querySelector(`input[name = ${non_filters[k]}]:checked`).value) || (prot_arr[i][non_filters[k]] + 1 == document.querySelector(`input[name = ${non_filters[k]}]:checked`).value)){
-          score = score + (reward_nonfilters / 2); // half reward
+          score = score + (reward_nonfilters*settings_prot[k] / 2); // half reward
         }
         else{
           score = score + penalty; // penalty
         }
       }
       else if(! document.querySelector(`input[name = ${non_filters[k]}]:checked`)){
-        score = score + (reward_nonfilters);
+        score = score + (reward_nonfilters*settings_prot[k]);
       }
       else{
         for (l = 0; l < document.querySelector(`input[name = ${non_filters[k]}]`).length; l++) {
           if(prot_arr[i][non_filters[k]][l] == document.querySelector(`input[name = ${non_filters[k]}]:checked`).value){
-            score = score + (reward_nonfilters);
+            score = score + (reward_nonfilters*settings_prot[k]);
           }
         }
       }
