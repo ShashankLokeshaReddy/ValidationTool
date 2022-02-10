@@ -51,7 +51,52 @@
 				<!-- Main -->
 				<div id="main">
                     <div class="inner">
-
+						<table id="meth_settings">
+							<tr style="background-color:#003B6D; color:white"> 
+								<td>Methoden</td>
+								<td>Gewicht</td>
+							</tr>
+							<tr>
+							<td>
+								<label>Kosten:</label>
+							</td>
+							<td>
+								<input type="range" id="Cost_Meth" name="Cost_Meth" min="0" max="100"><label>Value: <span id="demo_Cost_Meth"></span></label>
+							</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Vorbereitungszeit:</label>
+								</td>
+								<td>
+									<input type="range" id="Vorbereitungszeit" name="Vorbereitungszeit" min="0" max="100"><label>Value: <span id="demo_Vorbereitungszeit"></span></label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Ausführungszeit:</label>
+								</td>
+								<td>
+									<input type="range" id="Ausführungszeit" name="Ausführungszeit" min="0" max="100"><label>Value: <span id="demo_Ausführungszeit"></span></label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Personananzahl:</label>
+								</td>
+								<td>
+									<input type="range" id="Personananzahl" name="Personananzahl" min="0" max="100"><label>Value: <span id="demo_Personananzahl"></span></label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Evidenz:</label>
+								</td>
+								<td>
+									<input type="range" id="Evidenz" name="Evidenz" min="0" max="100"><label>Value: <span id="demo_Evidenz"></span></label>
+								</td>
+							</tr>
+						</table>
 					<table id="prot_settings">
 						<tr style="background-color:#378805; color:white"> 
 							<td>Prototypen</td>
@@ -130,9 +175,9 @@
 							</td>
 						</tr>
 					</table>
-					<div id="mySetContainer-meth">
-						<button onclick="save_settings()">Änderungen speichern</button>
-						<button onclick="reset_settings()">Zurücksetzen</button>
+					<div id="mySetContainer">
+						<button onclick="save_settings(1)">Änderungen speichern</button>
+						<button onclick="save_settings(2)">Zurücksetzen</button>
 					</div>
 					
 					 <div class="add-info-Setting">
