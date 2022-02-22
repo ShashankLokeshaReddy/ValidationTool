@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
@@ -53,9 +54,27 @@
                     <div class="inner">
                         <div id="methDIV">
                             <form id = "methotype">
+                               <table>
+                                <tr>
                                <div id="Meth_heading">
                                    <h1>Methoden</h1>
                                </div>
+                            </tr>
+                            <tr>
+                               <td>
+                               <div class="wrapper">
+                                <div class="search-input">
+                                  <a href="" target="_blank" hidden></a>
+                                  <input type="text" placeholder="Tippe um zu suchen..">
+                                  <div class="autocom-box">
+                                    <!-- here list are inserted from javascript -->
+                                  </div>
+                                  <div class="icon"><i class="fas fa-search"></i></div>
+                                </div>
+                              </div>
+                            </td>
+                            </tr>
+                            </table> 
                             <table id="table1">
                                 <tr style="background-color:#003B6D; color:white">
                                 <td>Annahmetyp und Betrachtungs-schwerpunkt</td>
@@ -366,6 +385,7 @@
                            </div>
 
                         <div id="methDIV_EMPTY">  
+                            <img id="meth_image" src="" width=100%/>
                             <button onclick="show_methDIV()">Zuruck</button>
                         </div>
                     </div>
