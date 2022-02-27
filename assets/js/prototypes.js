@@ -1,3 +1,5 @@
+let search_suggestions = [];
+
 $(document).ready(function(){
   $.getJSON("assets/json/settings.json", function(data){
     settings_prot = [data[0]["Budget_Prot"],data[0]["Zeit_Prot"],data[0]["VisFid_Prot"],data[0]["AudFid_Prot"],data[0]["HapFid_Prot"],data[0]["Funktionstiefe"],data[0]["Funktionsumfang"],data[0]["Eingabeverhalten"],data[0]["Ausgabeverhalten"]]; 
@@ -9,6 +11,10 @@ $(document).ready(function(){
 $(document).ready(function(){
     $.getJSON("assets/json/prototypes.json", function(data){
         prot_arr = data; 
+        for (i = 0; i < prot_arr.length; i++) {
+          search_suggestions.push(prot_arr[i].id);
+          search_suggestions.push(prot_arr[i].name);
+        }
     }).fail(function(){
         console.log("An error has occurred while fetching prototypes.");
     });
@@ -131,18 +137,24 @@ else{
           <img src="images/pic03.jpg"/>
         </span>
         <a>
-          <h2>${suggested_proto_array[i].name}</h2>
+          <h2>${suggested_proto_array[i].id}</h2>
           <div class="content">
 							<p>${suggested_proto_array[i].name}</p>
 					</div>
         </a>`;
 
-    article.onclick = function() {
-      let prot = document.getElementById("protDIV");
-      prot.style.display = "none";
-      let empt_prot = document.getElementById("protDIV_EMPTY");
-      empt_prot.style.display = "block";
-    }
+        article.onclick = function() {
+          for(var i = 0; i < prot_arr.length; i++){
+            if (article.innerHTML.includes(prot_arr[i].id)){
+              let prot_image = document.getElementById("prot_image");
+              prot_image.src = "images/prototypes/"+prot_arr[i].id+".PNG";
+              let prot = document.getElementById("protDIV");
+              prot.style.display = "none";
+              let empt_prot = document.getElementById("protDIV_EMPTY");
+              empt_prot.style.display = "block";
+            }
+          }
+        }
 
     document.getElementById("container_id").appendChild(article);
   }
@@ -150,6 +162,7 @@ else{
 document.getElementById('Proto_message').innerHTML  = textMess;
 var elmnt = document.getElementById("Proto_message");
 elmnt.scrollIntoView();
+inputBox.value = "";
 }
 
 // Add active class to the current button (highlight it)
@@ -198,3 +211,131 @@ function clearallprotypes(){
 
 }
 
+// Search bar
+// getting all required elements
+const searchWrapper = document.querySelector(".search-input");
+const inputBox = searchWrapper.querySelector("input");
+const suggBox = searchWrapper.querySelector(".autocom-box");
+const icon = searchWrapper.querySelector(".icon");
+let linkTag = searchWrapper.querySelector("a");
+let prot_search_list = [];
+let search_suggested_prot_array = [];
+
+function autosuggest(e){
+  let userData = e.target.value; //user enetered data
+  let emptyArray = [];
+  if(userData){
+      emptyArray = search_suggestions.filter((data)=>{
+          //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
+          return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+      });
+      emptyArray = emptyArray.map((data)=>{
+          // passing return data inside li tag
+          return data = `<li>${data}</li>`;
+      });
+      searchWrapper.classList.add("active"); //show autocomplete box
+      showsearch_suggestions(emptyArray);
+      let allList = suggBox.querySelectorAll("li");
+      prot_search_list = allList;
+      search_suggested_prot_array = [];
+      for (var i = 0; i < allList.length; i++) {
+          //adding onclick attribute in all li tag
+          allList[i].setAttribute("onclick", "select(this)");
+      }
+      console.log("prot_search_list",prot_search_list);
+      icon.onclick = ()=>{
+        clearallprotypes();
+        for (var i = 0; i < prot_search_list.length; i++) {
+          for(var j = 0; j < prot_arr.length; j++){
+            if(prot_search_list[i].innerHTML == prot_arr[j].id || prot_search_list[i].innerHTML == prot_arr[j].name){
+              if(!search_suggested_prot_array.includes(prot_arr[j])) {
+                search_suggested_prot_array.push(prot_arr[j]);
+              }
+            }
+          }
+        } 
+        searchWrapper.classList.remove("active");
+        var textMess = "Die vorgeschlagenen Prototypen sind:";
+        var node= document.getElementById("container_id");
+        node.querySelectorAll('*').forEach(n => n.remove());
+
+        if (search_suggested_prot_array.length == 0){
+          textMess = "Für die von Ihnen ausgewählten Optionen wurden keine Ergebnisse gefunden! Bitte wählen Sie eingeschränkte Optionen aus und versuchen Sie es erneut.";
+        }
+        else{
+          for (i = 0; i < search_suggested_prot_array.length; i++) {
+            let article = document.createElement("article");
+            article.id = "protpopupBtn";
+            article.class = "style2";
+            article.innerHTML = `
+                <span class="image">
+                  <img src="images/pic03.jpg"/>
+                </span>
+                <a>
+                  <h2>${search_suggested_prot_array[i].id}</h2>
+                  <div class="content">
+                      <p>${search_suggested_prot_array[i].name}</p>
+                  </div>
+                </a>`;
+
+            article.onclick = function() {
+              for(var i = 0; i < prot_arr.length; i++){
+                if (article.innerHTML.includes(prot_arr[i].id)){
+                  let prot_image = document.getElementById("prot_image");
+                  prot_image.src = "images/prototypes/"+prot_arr[i].id+".PNG";
+                  let prot = document.getElementById("protDIV");
+                  prot.style.display = "none";
+                  let empt_prot = document.getElementById("protDIV_EMPTY");
+                  empt_prot.style.display = "block";
+                }
+              }
+            }
+
+            document.getElementById("container_id").appendChild(article);
+          }
+        }
+
+        document.getElementById('Proto_message').innerHTML  = textMess;
+        var elmnt = document.getElementById("Proto_message");
+        elmnt.scrollIntoView();
+    }
+
+  }else{
+      searchWrapper.classList.remove("active"); //hide autocomplete box
+  }
+}
+// if user press any key and release
+inputBox.onkeyup = (e)=>{
+  autosuggest(e);
+}
+
+inputBox.onmouseup = (e)=>{
+  autosuggest(e);
+}
+
+function select(element){
+    let selectData = element.textContent;
+    inputBox.value = selectData;
+    searchWrapper.classList.remove("active");
+    console.log("element",element);
+    prot_search_list = [element];
+}
+
+function showsearch_suggestions(list){
+    let listData;
+    if(!list.length){
+        userValue = inputBox.value;
+        listData = `<li>${userValue}</li>`;
+    }else{
+      listData = list.join('');
+    }
+    suggBox.innerHTML = listData;
+}
+
+document.addEventListener('click', function(event) {
+    var isClickInsideElement = searchWrapper.contains(event.target);
+    if (!isClickInsideElement) {
+        //Do something click is outside specified element
+        searchWrapper.classList.remove("active");
+    }
+});

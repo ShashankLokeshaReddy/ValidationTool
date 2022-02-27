@@ -175,7 +175,7 @@ else{
 document.getElementById('Meth_message').innerHTML  = textMess;
 var elmnt = document.getElementById("Meth_message");
 elmnt.scrollIntoView();
-// inputBox.value = "";
+inputBox.value = "";
 // search_suggested_meth_array = [];
 }
 
@@ -235,92 +235,8 @@ let linkTag = searchWrapper.querySelector("a");
 let webLink;
 let meth_search_list = [];
 let search_suggested_meth_array = [];
-// if user press any key and release
-inputBox.onkeyup = (e)=>{
-    let userData = e.target.value; //user enetered data
-    let emptyArray = [];
-    if(userData){
-        emptyArray = search_suggestions.filter((data)=>{
-            //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
-            return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
-        });
-        emptyArray = emptyArray.map((data)=>{
-            // passing return data inside li tag
-            return data = `<li>${data}</li>`;
-        });
-        searchWrapper.classList.add("active"); //show autocomplete box
-        showsearch_suggestions(emptyArray);
-        let allList = suggBox.querySelectorAll("li");
-        meth_search_list = allList;
-        search_suggested_meth_array = [];
-        for (var i = 0; i < allList.length; i++) {
-            //adding onclick attribute in all li tag
-            allList[i].setAttribute("onclick", "select(this)");
-        }
-        console.log("meth_search_list",meth_search_list);
-        icon.onclick = ()=>{
-          clearallmethods();
-          for (var i = 0; i < meth_search_list.length; i++) {
-            for(var j = 0; j < meth_arr.length; j++){
-              if(meth_search_list[i].innerHTML == meth_arr[j].id || meth_search_list[i].innerHTML == meth_arr[j].name){
-                if(!search_suggested_meth_array.includes(meth_arr[j])) {
-                  search_suggested_meth_array.push(meth_arr[j]);
-                }
-              }
-            }
-          } 
-          searchWrapper.classList.remove("active");
-          var textMess = "Die vorgeschlagenen Methoden sind:";
-          var node= document.getElementById("container_id_meth");
-          node.querySelectorAll('*').forEach(n => n.remove());
-  
-          if (search_suggested_meth_array.length == 0){
-            textMess = "Für die von Ihnen ausgewählten Optionen wurden keine Ergebnisse gefunden! Bitte wählen Sie eingeschränkte Optionen aus und versuchen Sie es erneut.";
-          }
-          else{
-            for (i = 0; i < search_suggested_meth_array.length; i++) {
-              let article = document.createElement("article");
-              article.id = "methpopupBtn";
-              article.class = "style2";
-              article.innerHTML = `
-                  <span class="image">
-                    <img src="images/pic02.jpg"/>
-                  </span>
-                  <a>
-                    <h2>${search_suggested_meth_array[i].id}</h2>
-                    <div class="content">
-                        <p>${search_suggested_meth_array[i].name}</p>
-                    </div>
-                  </a>`;
-  
-              article.onclick = function() {
-                for(var i = 0; i < meth_arr.length; i++){
-                  if (article.innerHTML.includes(meth_arr[i].id)){
-                    let meth_image = document.getElementById("meth_image");
-                    meth_image.src = "images/methods/"+meth_arr[i].id+".PNG";
-                    let meth = document.getElementById("methDIV");
-                    meth.style.display = "none";
-                    let empt_meth = document.getElementById("methDIV_EMPTY");
-                    empt_meth.style.display = "block";
-                  }
-                }
-              }
-  
-              document.getElementById("container_id_meth").appendChild(article);
-            }
-          }
-  
-          document.getElementById('Meth_message').innerHTML  = textMess;
-          var elmnt = document.getElementById("Meth_message");
-          elmnt.scrollIntoView();
-      }
 
-    }else{
-        searchWrapper.classList.remove("active"); //hide autocomplete box
-    }
-}
-
-inputBox.onmouseup = (e)=>{
+function autosuggest(e){
   let userData = e.target.value; //user enetered data
   let emptyArray = [];
   if(userData){
@@ -402,6 +318,14 @@ inputBox.onmouseup = (e)=>{
   }else{
       searchWrapper.classList.remove("active"); //hide autocomplete box
   }
+}
+// if user press any key and release
+inputBox.onkeyup = (e)=>{
+  autosuggest(e);
+}
+
+inputBox.onmouseup = (e)=>{
+  autosuggest(e);
 }
 
 function select(element){
