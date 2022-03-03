@@ -75,158 +75,208 @@ $(document).ready(function(){
   });
 });
 
-Budget_Prot.oninput = function() {
+function change_color(labels, color) {
   message.innerHTML = "";
+  var elements = document.getElementsByClassName(labels); // get all elements
+  for(var i = 0; i < elements.length; i++){
+    elements[i].style.color = color;
+  }
+}
+
+Budget_Prot.oninput = function() {
+  
   output_Budget_Prot.innerHTML = this.value;
   if (output_Budget_Prot.innerHTML > (prot_max - output_Zeit_Prot.innerHTML - output_VisFid_Prot.innerHTML - output_AudFid_Prot.innerHTML - output_HapFid_Prot.innerHTML - output_Funktionstiefe.innerHTML - output_Funktionsumfang.innerHTML - output_Eingabeverhalten.innerHTML - output_Ausgabeverhalten.innerHTML)){
-    Budget_Prot.disabled = true;
+    change_color("prot_labels", "red");
+  }
+  else if(output_Budget_Prot.innerHTML == (prot_max - output_Zeit_Prot.innerHTML - output_VisFid_Prot.innerHTML - output_AudFid_Prot.innerHTML - output_HapFid_Prot.innerHTML - output_Funktionstiefe.innerHTML - output_Funktionsumfang.innerHTML - output_Eingabeverhalten.innerHTML - output_Ausgabeverhalten.innerHTML)){
+    change_color("prot_labels", "#0be57d");
   }
   else{
-    Budget_Prot.disabled = false;
+    change_color("prot_labels", "black");
   }
 }
 
 Zeit_Prot.oninput = function() {
-  message.innerHTML = "";
+  
   output_Zeit_Prot.innerHTML = this.value;
   if (output_Zeit_Prot.innerHTML > (prot_max - output_Budget_Prot.innerHTML - output_VisFid_Prot.innerHTML - output_AudFid_Prot.innerHTML - output_HapFid_Prot.innerHTML - output_Funktionstiefe.innerHTML - output_Funktionsumfang.innerHTML - output_Eingabeverhalten.innerHTML - output_Ausgabeverhalten.innerHTML)){
-    Zeit_Prot.disabled = true;
+    change_color("prot_labels", "red");
+  }
+  else if (output_Zeit_Prot.innerHTML == (prot_max - output_Budget_Prot.innerHTML - output_VisFid_Prot.innerHTML - output_AudFid_Prot.innerHTML - output_HapFid_Prot.innerHTML - output_Funktionstiefe.innerHTML - output_Funktionsumfang.innerHTML - output_Eingabeverhalten.innerHTML - output_Ausgabeverhalten.innerHTML)){
+    change_color("prot_labels", "#0be57d");
   }
   else{
-    Zeit_Prot.disabled = false;
+    change_color("prot_labels", "black");
   }
 }
 
 
 VisFid_Prot.oninput = function() {
-  message.innerHTML = "";
+  
   output_VisFid_Prot.innerHTML = this.value;
   if (output_VisFid_Prot.innerHTML > (prot_max - output_Budget_Prot.innerHTML - output_Zeit_Prot.innerHTML - output_AudFid_Prot.innerHTML - output_HapFid_Prot.innerHTML - output_Funktionstiefe.innerHTML - output_Funktionsumfang.innerHTML - output_Eingabeverhalten.innerHTML - output_Ausgabeverhalten.innerHTML)){
-    VisFid_Prot.disabled = true;
+    change_color("prot_labels", "red");
+  }
+  else if (output_VisFid_Prot.innerHTML == (prot_max - output_Budget_Prot.innerHTML - output_Zeit_Prot.innerHTML - output_AudFid_Prot.innerHTML - output_HapFid_Prot.innerHTML - output_Funktionstiefe.innerHTML - output_Funktionsumfang.innerHTML - output_Eingabeverhalten.innerHTML - output_Ausgabeverhalten.innerHTML)){
+    change_color("prot_labels", "#0be57d");
   }
   else{
-    VisFid_Prot.disabled = false;
+    change_color("prot_labels", "black");
   }
 }
 
 AudFid_Prot.oninput = function() {
-  message.innerHTML = "";
+  
   output_AudFid_Prot.innerHTML = this.value;
   if (output_AudFid_Prot.innerHTML > (prot_max - output_Budget_Prot.innerHTML - output_Zeit_Prot.innerHTML - output_VisFid_Prot.innerHTML - output_HapFid_Prot.innerHTML - output_Funktionstiefe.innerHTML - output_Funktionsumfang.innerHTML - output_Eingabeverhalten.innerHTML - output_Ausgabeverhalten.innerHTML)){
-    AudFid_Prot.disabled = true;
+    change_color("prot_labels", "red");
+  }
+  else if (output_AudFid_Prot.innerHTML == (prot_max - output_Budget_Prot.innerHTML - output_Zeit_Prot.innerHTML - output_VisFid_Prot.innerHTML - output_HapFid_Prot.innerHTML - output_Funktionstiefe.innerHTML - output_Funktionsumfang.innerHTML - output_Eingabeverhalten.innerHTML - output_Ausgabeverhalten.innerHTML)){
+    change_color("prot_labels", "#0be57d");
   }
   else{
-    AudFid_Prot.disabled = false;
+    change_color("prot_labels", "black");
   }
 }
 
 HapFid_Prot.oninput = function() {
-  message.innerHTML = "";
+  
   output_HapFid_Prot.innerHTML = this.value;
   if (output_HapFid_Prot.innerHTML > (prot_max - output_Budget_Prot.innerHTML - output_Zeit_Prot.innerHTML - output_VisFid_Prot.innerHTML - output_AudFid_Prot.innerHTML - output_Funktionstiefe.innerHTML - output_Funktionsumfang.innerHTML - output_Eingabeverhalten.innerHTML - output_Ausgabeverhalten.innerHTML)){
-    HapFid_Prot.disabled = true;
+    change_color("prot_labels", "red");
+  }
+  else if (output_HapFid_Prot.innerHTML == (prot_max - output_Budget_Prot.innerHTML - output_Zeit_Prot.innerHTML - output_VisFid_Prot.innerHTML - output_AudFid_Prot.innerHTML - output_Funktionstiefe.innerHTML - output_Funktionsumfang.innerHTML - output_Eingabeverhalten.innerHTML - output_Ausgabeverhalten.innerHTML)){
+    change_color("prot_labels", "#0be57d");
   }
   else{
-    HapFid_Prot.disabled = false;
+    change_color("prot_labels", "black");
   }
 }
 
 Funktionstiefe.oninput = function() {
-  message.innerHTML = "";
+  
   output_Funktionstiefe.innerHTML = this.value;
   if (output_Funktionstiefe.innerHTML > (prot_max - output_Budget_Prot.innerHTML - output_Zeit_Prot.innerHTML - output_VisFid_Prot.innerHTML - output_AudFid_Prot.innerHTML - output_HapFid_Prot.innerHTML - output_Funktionsumfang.innerHTML - output_Eingabeverhalten.innerHTML - output_Ausgabeverhalten.innerHTML)){
-    Funktionstiefe.disabled = true;
+    change_color("prot_labels", "red");
+  }
+  else if (output_Funktionstiefe.innerHTML == (prot_max - output_Budget_Prot.innerHTML - output_Zeit_Prot.innerHTML - output_VisFid_Prot.innerHTML - output_AudFid_Prot.innerHTML - output_HapFid_Prot.innerHTML - output_Funktionsumfang.innerHTML - output_Eingabeverhalten.innerHTML - output_Ausgabeverhalten.innerHTML)){
+    change_color("prot_labels", "#0be57d");
   }
   else{
-    Funktionstiefe.disabled = false;
+    change_color("prot_labels", "black");
   }
 }
 
 Funktionsumfang.oninput = function() {
-  message.innerHTML = "";
+  
   output_Funktionsumfang.innerHTML = this.value;
   if (output_Funktionsumfang.innerHTML > (prot_max - output_Budget_Prot.innerHTML - output_Zeit_Prot.innerHTML - output_VisFid_Prot.innerHTML - output_AudFid_Prot.innerHTML - output_HapFid_Prot.innerHTML - output_Funktionstiefe.innerHTML - output_Eingabeverhalten.innerHTML - output_Ausgabeverhalten.innerHTML)){
-    Funktionsumfang.disabled = true;
+    change_color("prot_labels", "red");
+  }
+  else if (output_Funktionsumfang.innerHTML == (prot_max - output_Budget_Prot.innerHTML - output_Zeit_Prot.innerHTML - output_VisFid_Prot.innerHTML - output_AudFid_Prot.innerHTML - output_HapFid_Prot.innerHTML - output_Funktionstiefe.innerHTML - output_Eingabeverhalten.innerHTML - output_Ausgabeverhalten.innerHTML)){
+    change_color("prot_labels", "#0be57d");
   }
   else{
-    Funktionsumfang.disabled = false;
+    change_color("prot_labels", "black");
   }
 }
 
 Eingabeverhalten.oninput = function() {
-  message.innerHTML = "";
+  
   output_Eingabeverhalten.innerHTML = this.value;
   if (output_Eingabeverhalten.innerHTML > (prot_max - output_Budget_Prot.innerHTML - output_Zeit_Prot.innerHTML - output_VisFid_Prot.innerHTML - output_AudFid_Prot.innerHTML - output_HapFid_Prot.innerHTML - output_Funktionstiefe.innerHTML - output_Funktionsumfang.innerHTML - output_Ausgabeverhalten.innerHTML)){
-    Eingabeverhalten.disabled = true;
+    change_color("prot_labels", "red");
+  }
+  else if (output_Eingabeverhalten.innerHTML == (prot_max - output_Budget_Prot.innerHTML - output_Zeit_Prot.innerHTML - output_VisFid_Prot.innerHTML - output_AudFid_Prot.innerHTML - output_HapFid_Prot.innerHTML - output_Funktionstiefe.innerHTML - output_Funktionsumfang.innerHTML - output_Ausgabeverhalten.innerHTML)){
+    change_color("prot_labels", "#0be57d");
   }
   else{
-    Eingabeverhalten.disabled = false;
+    change_color("prot_labels", "black");
   }
 }
 
 Ausgabeverhalten.oninput = function() {
-  message.innerHTML = "";
+  
   output_Ausgabeverhalten.innerHTML = this.value;
   if (output_Ausgabeverhalten.innerHTML > (prot_max - output_Budget_Prot.innerHTML - output_Zeit_Prot.innerHTML - output_VisFid_Prot.innerHTML - output_AudFid_Prot.innerHTML - output_HapFid_Prot.innerHTML - output_Funktionstiefe.innerHTML - output_Funktionsumfang.innerHTML - output_Eingabeverhalten.innerHTML)){
-    Ausgabeverhalten.disabled = true;
+    change_color("prot_labels", "red");
+  }
+  else if (output_Ausgabeverhalten.innerHTML == (prot_max - output_Budget_Prot.innerHTML - output_Zeit_Prot.innerHTML - output_VisFid_Prot.innerHTML - output_AudFid_Prot.innerHTML - output_HapFid_Prot.innerHTML - output_Funktionstiefe.innerHTML - output_Funktionsumfang.innerHTML - output_Eingabeverhalten.innerHTML)){
+    change_color("prot_labels", "#0be57d");
   }
   else{
-    Ausgabeverhalten.disabled = false;
+    change_color("prot_labels", "black");
   }
 }
 
 Cost_Meth.oninput = function() {
-  message.innerHTML = "";
+  
   output_Cost_Meth.innerHTML = this.value;
   if (output_Cost_Meth.innerHTML > (meth_max - output_Vorbereitungszeit.innerHTML - output_Ausführungszeit.innerHTML - output_Personananzahl.innerHTML - output_Evidenz.innerHTML)){
-    Cost_Meth.disabled = true;
+    change_color("meth_labels", "red");
+  }
+  else if (output_Cost_Meth.innerHTML == (meth_max - output_Vorbereitungszeit.innerHTML - output_Ausführungszeit.innerHTML - output_Personananzahl.innerHTML - output_Evidenz.innerHTML)){
+    change_color("meth_labels", "#0be57d");
   }
   else{
-    Cost_Meth.disabled = false;
+    change_color("meth_labels", "black");
   }
 }
 
 Vorbereitungszeit.oninput = function() {
-  message.innerHTML = "";
+  
   output_Vorbereitungszeit.innerHTML = this.value;
   if (output_Vorbereitungszeit.innerHTML > (meth_max - output_Cost_Meth.innerHTML - output_Ausführungszeit.innerHTML - output_Personananzahl.innerHTML - output_Evidenz.innerHTML)){
-    Vorbereitungszeit.disabled = true;
+    change_color("meth_labels", "red");
+  }
+  else if (output_Vorbereitungszeit.innerHTML == (meth_max - output_Cost_Meth.innerHTML - output_Ausführungszeit.innerHTML - output_Personananzahl.innerHTML - output_Evidenz.innerHTML)){
+    change_color("meth_labels", "#0be57d");
   }
   else{
-    Vorbereitungszeit.disabled = false;
+    change_color("meth_labels", "black");
   }
 }
 
 Ausführungszeit.oninput = function() {
-  message.innerHTML = "";
+  
   output_Ausführungszeit.innerHTML = this.value;
   if (output_Ausführungszeit.innerHTML > (meth_max - output_Cost_Meth.innerHTML - output_Vorbereitungszeit.innerHTML - output_Personananzahl.innerHTML - output_Evidenz.innerHTML)){
-    Ausführungszeit.disabled = true;
+    change_color("meth_labels", "red");
+  }
+  else if (output_Ausführungszeit.innerHTML == (meth_max - output_Cost_Meth.innerHTML - output_Vorbereitungszeit.innerHTML - output_Personananzahl.innerHTML - output_Evidenz.innerHTML)){
+    change_color("meth_labels", "#0be57d");
   }
   else{
-    Ausführungszeit.disabled = false;
+    change_color("meth_labels", "black");
   }
 }
 
 Personananzahl.oninput = function() {
-  message.innerHTML = "";
+  
   output_Personananzahl.innerHTML = this.value;
   if (output_Personananzahl.innerHTML > (meth_max - output_Cost_Meth.innerHTML - output_Vorbereitungszeit.innerHTML - output_Ausführungszeit.innerHTML - output_Evidenz.innerHTML)){
-    Personananzahl.disabled = true;
+    change_color("meth_labels", "red");
+  }
+  else if (output_Personananzahl.innerHTML == (meth_max - output_Cost_Meth.innerHTML - output_Vorbereitungszeit.innerHTML - output_Ausführungszeit.innerHTML - output_Evidenz.innerHTML)){
+    change_color("meth_labels", "#0be57d");
   }
   else{
-    Personananzahl.disabled = false;
+    change_color("meth_labels", "black");
   }
 }
 
 Evidenz.oninput = function() {
-  message.innerHTML = "";
+  
   output_Evidenz.innerHTML = this.value;
   if (output_Evidenz.innerHTML > (meth_max - output_Cost_Meth.innerHTML - output_Vorbereitungszeit.innerHTML - output_Ausführungszeit.innerHTML - output_Personananzahl.innerHTML)){
-    Evidenz.disabled = true;
+    change_color("meth_labels", "red");
+  }
+  else if (output_Evidenz.innerHTML == (meth_max - output_Cost_Meth.innerHTML - output_Vorbereitungszeit.innerHTML - output_Ausführungszeit.innerHTML - output_Personananzahl.innerHTML)){
+    change_color("meth_labels", "#0be57d");
   }
   else{
-    Evidenz.disabled = false;
+    change_color("meth_labels", "black");
   }
 }
 
@@ -237,18 +287,28 @@ function save_settings(parameter){
 
   if(parameter == 2)
   { 
-   data = [{"Budget_Prot":"20","Zeit_Prot":"10","VisFid_Prot":"10","AudFid_Prot":"10","HapFid_Prot":"10","Funktionstiefe":"10","Funktionsumfang":"10","Eingabeverhalten":"10","Ausgabeverhalten":"10"},{"Cost_Meth":"25","Vorbereitungszeit":"18","Ausführungszeit":"18","Personananzahl":"14","Evidenz":"25"}];
+   data = [{"Budget_Prot":"15","Zeit_Prot":"15","VisFid_Prot":"10","AudFid_Prot":"10","HapFid_Prot":"10","Funktionstiefe":"10","Funktionsumfang":"10","Eingabeverhalten":"10","Ausgabeverhalten":"10"}, {"Cost_Meth":"25","Vorbereitungszeit":"17","Ausführungszeit":"17","Personananzahl":"16","Evidenz":"25"}];
    set_slider_values(data);
   }
-  const options = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  };
-  fetch('/api',options).then(response =>{
-    console.log(response)
-  });
-  message.innerHTML  = "Einstellwerte aktualisiert";
+  var sum_meth = parseInt(data[1]["Cost_Meth"]) + parseInt(data[1]["Vorbereitungszeit"]) + parseInt(data[1]["Ausführungszeit"]) + parseInt(data[1]["Personananzahl"]) + parseInt(data[1]["Evidenz"]);
+  var sum_prot = parseInt(data[0]["Budget_Prot"]) + parseInt(data[0]["Zeit_Prot"]) + parseInt(data[0]["VisFid_Prot"]) + parseInt(data[0]["AudFid_Prot"]) + parseInt(data[0]["HapFid_Prot"]) + parseInt(data[0]["Funktionstiefe"]) + parseInt(data[0]["Funktionsumfang"]) + parseInt(data[0]["Eingabeverhalten"]) + parseInt(data[0]["Ausgabeverhalten"]);
+  console.log("sum_meth",sum_meth,sum_prot);
+  if (sum_meth==meth_max && sum_prot==prot_max){
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    };
+    fetch('/api',options).then(response =>{
+      console.log(response)
+    });
+    change_color("prot_labels", "black");
+    change_color("meth_labels", "black");
+    message.innerHTML  = "Einstellwerte aktualisiert";
+  }
+  else{
+    message.innerHTML  = "Stellen Sie sicher, dass die Summe aller Gewichte genau gleich 100 % ist";
+  }
 }

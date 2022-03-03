@@ -61,7 +61,7 @@ if (c == "submit") {
     Cluster_prot_groups = ['Virtuelle_nicht_funktionale_Gestalt', 'Physische_nicht_funktionale_Gestalt', 'Konzeptmodelle', 'Vertriebs-Simulation', 'Fiktionale,erlebbare-Marktleistungs-geschichten', 'FunktionaleMarkleistungs-repräsentationen']
   }
   var prot_arr_values = [].concat(a_t , a_v , mst , ts , bas, Cluster_prot_groups); 
-  var filters = ["Problem", "Mehrwehrt", "Gesamtlösung", "Produktmerkmale", "Produkteigenschaften", "Preis", "Usability", "Erlösmechanik",  "technMachbarkeit", "Leistungserbringung", "hardware", "software", "human", "sachleistung", "pss", "Dienstleistung", "design", "ux", "it", "et", "mb", "BusinessAnalysis", "marketing", "basic_no", "int_sol", "own_mark_perf", "ext_sol"];
+  var filters = ["G-N-P","G-U-P","G-B-P","G-K-P","G-M-P","E-N-P","E-U-P","E-B-P","E-K-P","E-M-P","Problem", "Mehrwehrt", "Gesamtlösung", "Produktmerkmale", "Produkteigenschaften", "Preis", "Usability", "Erlösmechanik",  "technMachbarkeit", "Leistungserbringung", "hardware", "software", "human", "sachleistung", "pss", "Dienstleistung", "design", "ux", "it", "et", "mb", "BusinessAnalysis", "marketing", "basic_no", "int_sol", "own_mark_perf", "ext_sol"];
   var non_filters = ["Rel_Kosten", "time", "vis_fid", "aud_fid", "hap_fid", "Funktionstiefe", "Funktionsumfang", "Eingabeverhalten", "Ausgabeverhalten"];
   console.log("Cluster_prot_groups",Cluster_prot_groups);
   for (i = 0; i < prot_arr.length; i++) {
