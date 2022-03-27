@@ -23,7 +23,7 @@ $(document).ready(function(){
 let suggested_proto_array = [];
 var empt_prot = document.getElementById("protDIV_EMPTY");
 empt_prot.style.display = "none";
-reward_nonfilters = 10;
+reward_nonfilters = 1;
 reward_filters = 0;
 penalty = -10000;
 
@@ -82,22 +82,22 @@ if (c == "submit") {
     for (k = 0; k < non_filters.length; k++) {
       if(document.querySelector(`input[name = ${non_filters[k]}]:checked`) && Array.isArray(prot_arr[i][non_filters[k]]) == false){
         if(prot_arr[i][non_filters[k]] == document.querySelector(`input[name = ${non_filters[k]}]:checked`).value){
-          score = score + (reward_nonfilters*settings_prot[k]); // full reward
+          score = score + (reward_nonfilters*(settings_prot[k]/100)); // full reward
         }
         else if((prot_arr[i][non_filters[k]] - 1 == document.querySelector(`input[name = ${non_filters[k]}]:checked`).value) || (prot_arr[i][non_filters[k]] + 1 == document.querySelector(`input[name = ${non_filters[k]}]:checked`).value)){
-          score = score + (reward_nonfilters*settings_prot[k] / 2); // half reward
+          score = score + (reward_nonfilters*(settings_prot[k]/100) / 2); // half reward
         }
         else{
           score = score + penalty; // penalty
         }
       }
       else if(! document.querySelector(`input[name = ${non_filters[k]}]:checked`)){
-        score = score + (reward_nonfilters*settings_prot[k]);
+        score = score + (reward_nonfilters*(settings_prot[k]/100));
       }
       else{
         for (l = 0; l < document.querySelector(`input[name = ${non_filters[k]}]`).length; l++) {
           if(prot_arr[i][non_filters[k]][l] == document.querySelector(`input[name = ${non_filters[k]}]:checked`).value){
-            score = score + (reward_nonfilters*settings_prot[k]);
+            score = score + (reward_nonfilters*(settings_prot[k]/100));
           }
         }
       }

@@ -23,7 +23,7 @@ $(document).ready(function(){
 let suggested_meth_array = [];
 var empt_meth = document.getElementById("methDIV_EMPTY");
 empt_meth.style.display = "none";
-reward_meth_nonfilters = 10;
+reward_meth_nonfilters = 1;
 reward_meth_filters = 0;
 penalty_meth = -10000;
 
@@ -95,22 +95,22 @@ if (c == "submit") {
     for (k = 0; k < non_filters.length; k++) {
       if(document.querySelector(`input[name = ${non_filters[k]}]:checked`) && Array.isArray(meth_arr[i][non_filters[k]]) == false){
         if(meth_arr[i][non_filters[k]] == document.querySelector(`input[name = ${non_filters[k]}]:checked`).value){
-          score = score + (reward_meth_nonfilters*settings_meth[k]); // full reward
+          score = score + (reward_meth_nonfilters*(settings_meth[k]/100)); // full reward
         }
         else if((meth_arr[i][non_filters[k]] - 1 == document.querySelector(`input[name = ${non_filters[k]}]:checked`).value) || (meth_arr[i][non_filters[k]] + 1 == document.querySelector(`input[name = ${non_filters[k]}]:checked`).value)){
-          score = score + (reward_meth_nonfilters*settings_meth[k] / 2); // half reward
+          score = score + (reward_meth_nonfilters*(settings_meth[k]/100) / 2); // half reward
         }
         else{
           score = score + penalty_meth; // penalty_meth
         }
       }
       else if(! document.querySelector(`input[name = ${non_filters[k]}]:checked`)){
-        score = score + (reward_meth_nonfilters*settings_meth[k]);
+        score = score + (reward_meth_nonfilters*(settings_meth[k]/100));
       }
       else{
         for (l = 0; l < document.querySelector(`input[name = ${non_filters[k]}]`).length; l++) {
           if(meth_arr[i][non_filters[k]][l] == document.querySelector(`input[name = ${non_filters[k]}]:checked`).value){
-            score = score + (reward_meth_nonfilters*settings_meth[k]);
+            score = score + (reward_meth_nonfilters*(settings_meth[k]/100));
           }
         }
       }
