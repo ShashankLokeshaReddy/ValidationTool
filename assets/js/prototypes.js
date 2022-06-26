@@ -147,7 +147,7 @@ else{
           for(var i = 0; i < prot_arr.length; i++){
             if (article.innerHTML.includes(prot_arr[i].id)){
               let prot_image = document.getElementById("prot_image");
-              prot_image.src = "images/prototypes/"+prot_arr[i].id+".PNG" || ".png";
+              prot_image.src = "images/prototypes/"+prot_arr[i].id+".PNG";
               let prot = document.getElementById("protDIV");
               prot.style.display = "none";
               let empt_prot = document.getElementById("protDIV_EMPTY");
@@ -282,7 +282,7 @@ function autosuggest(e){
               for(var i = 0; i < prot_arr.length; i++){
                 if (article.innerHTML.includes(prot_arr[i].id)){
                   let prot_image = document.getElementById("prot_image");
-                  prot_image.src = "images/prototypes/"+prot_arr[i].id+".PNG" || ".png";
+                  prot_image.src = "images/prototypes/"+prot_arr[i].id+".PNG";
                   let prot = document.getElementById("protDIV");
                   prot.style.display = "none";
                   let empt_prot = document.getElementById("protDIV_EMPTY");

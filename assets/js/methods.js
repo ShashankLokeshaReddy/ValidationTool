@@ -160,7 +160,7 @@ else{
       for(var i = 0; i < meth_arr.length; i++){
         if (article.innerHTML.includes(meth_arr[i].id)){
           let meth_image = document.getElementById("meth_image");
-          meth_image.src = "images/methods/"+meth_arr[i].id+".PNG" || ".png";
+          meth_image.src = "images/methods/"+meth_arr[i].id+".PNG";
           let meth = document.getElementById("methDIV");
           meth.style.display = "none";
           let empt_meth = document.getElementById("methDIV_EMPTY");
@@ -297,7 +297,7 @@ function autosuggest(e){
               for(var i = 0; i < meth_arr.length; i++){
                 if (article.innerHTML.includes(meth_arr[i].id)){
                   let meth_image = document.getElementById("meth_image");
-                  meth_image.src = "images/methods/"+meth_arr[i].id+".PNG" || ".png";
+                  meth_image.src = "images/methods/"+meth_arr[i].id+".PNG";
                   let meth = document.getElementById("methDIV");
                   meth.style.display = "none";
                   let empt_meth = document.getElementById("methDIV_EMPTY");
