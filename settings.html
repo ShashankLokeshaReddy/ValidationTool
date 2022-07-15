@@ -62,7 +62,7 @@
 								<label>Kosten:</label>
 							</td>
 							<td>
-								<input type="range" id="Cost_Meth" name="Cost_Meth" min="0" max="100"><label class="meth_labels">Value: <span id="demo_Cost_Meth"></span></label>
+								<input type="range" id="Cost_Meth" name="Cost_Meth" min="0" max="100"><button class="btn" onclick="Cost_Meth_Zero()" id="zero-Cost_Meth"><i class="fa fa-trash"></i></button><label class="meth_labels">Value: <span id="demo_Cost_Meth"></span></label>		
 							</td>
 							</tr>
 							<tr>
@@ -70,7 +70,7 @@
 									<label>Vorbereitungszeit:</label>
 								</td>
 								<td>
-									<input type="range" id="Vorbereitungszeit" name="Vorbereitungszeit" min="0" max="100"><label class="meth_labels">Value: <span id="demo_Vorbereitungszeit"></span></label>
+									<input type="range" id="Vorbereitungszeit" name="Vorbereitungszeit" min="0" max="100"><button class="btn" onclick="Vorbereitungszeit_Zero()" id="zero-Vorbereitungszeit"><i class="fa fa-trash"></i></button><label class="meth_labels">Value: <span id="demo_Vorbereitungszeit"></span></label>
 								</td>
 							</tr>
 							<tr>
@@ -78,7 +78,7 @@
 									<label>Ausführungszeit:</label>
 								</td>
 								<td>
-									<input type="range" id="Ausführungszeit" name="Ausführungszeit" min="0" max="100"><label class="meth_labels">Value: <span id="demo_Ausführungszeit"></span></label>
+									<input type="range" id="Ausführungszeit" name="Ausführungszeit" min="0" max="100"><button class="btn" onclick="Ausführungszeit_Zero()" id="zero-Ausführungszeit"><i class="fa fa-trash"></i></button><label class="meth_labels">Value: <span id="demo_Ausführungszeit"></span></label>
 								</td>
 							</tr>
 							<tr>
@@ -86,7 +86,7 @@
 									<label>Personananzahl:</label>
 								</td>
 								<td>
-									<input type="range" id="Personananzahl" name="Personananzahl" min="0" max="100"><label class="meth_labels">Value: <span id="demo_Personananzahl"></span></label>
+									<input type="range" id="Personananzahl" name="Personananzahl" min="0" max="100"><button class="btn" onclick="Personananzahl_Zero()" id="zero-Personananzahl"><i class="fa fa-trash"></i></button><label class="meth_labels">Value: <span id="demo_Personananzahl"></span></label>
 								</td>
 							</tr>
 							<tr>
@@ -94,7 +94,7 @@
 									<label>Evidenz:</label>
 								</td>
 								<td>
-									<input type="range" id="Evidenz" name="Evidenz" min="0" max="100"><label class="meth_labels">Value: <span id="demo_Evidenz"></span></label>
+									<input type="range" id="Evidenz" name="Evidenz" min="0" max="100"><button class="btn" onclick="Evidenz_Zero()" id="zero-Evidenz"><i class="fa fa-trash"></i></button><label class="meth_labels">Value: <span id="demo_Evidenz"></span></label>
 								</td>
 							</tr>
 						</table>
@@ -108,7 +108,7 @@
 							<label>Budget:</label>
 						</td>
 						<td>
-							<input type="range" id="Budget_Prot" name="Budget_Prot" min="0" max="100"><label class="prot_labels">Value: <span id="demo_Budget_Prot"></span></label>
+							<input type="range" id="Budget_Prot" name="Budget_Prot" min="0" max="100"><button class="btn" onclick="Budget_Prot_Zero()" id="zero-Budget_Prot"><i class="fa fa-trash"></i></button><label class="prot_labels">Value: <span id="demo_Budget_Prot"></span></label>
 						</td>
 						</tr>
 						<tr>
@@ -116,7 +116,7 @@
 								<label>Zeit:</label>
 							</td>
 							<td>
-								<input type="range" id="Zeit_Prot" name="Zeit_Prot" min="0" max="100"><label class="prot_labels">Value: <span id="demo_Zeit_Prot"></span></label>
+								<input type="range" id="Zeit_Prot" name="Zeit_Prot" min="0" max="100"><button class="btn" onclick="Zeit_Prot_Zero()" id="zero-Zeit_Prot"><i class="fa fa-trash"></i></button><label class="prot_labels">Value: <span id="demo_Zeit_Prot"></span></label>
 							</td>
 						</tr>
 						<tr>
@@ -124,7 +124,7 @@
 								<label>Visuelle Wiedergabetreue:</label>
 							</td>
 							<td>
-								<input type="range" id="VisFid_Prot" name="VisFid_Prot" min="0" max="100"><label class="prot_labels">Value: <span id="demo_VisFid_Prot"></span></label>
+								<input type="range" id="VisFid_Prot" name="VisFid_Prot" min="0" max="100"><button class="btn" onclick="VisFid_Prot_Zero()" id="zero-VisFid_Prot"><i class="fa fa-trash"></i></button><label class="prot_labels">Value: <span id="demo_VisFid_Prot"></span></label>
 							</td>
 						</tr>
 						<tr>
@@ -132,7 +132,7 @@
 								<label>Auditive Wiedergabetreue:</label>
 							</td>
 							<td>
-								<input type="range" id="AudFid_Prot" name="AudFid_Prot" min="0" max="100"><label class="prot_labels">Value: <span id="demo_AudFid_Prot"></span></label>
+								<input type="range" id="AudFid_Prot" name="AudFid_Prot" min="0" max="100"><button class="btn" onclick="AudFid_Prot_Zero()" id="zero-AudFid_Prot"><i class="fa fa-trash"></i></button></button><label class="prot_labels">Value: <span id="demo_AudFid_Prot"></span></label>
 							</td>
 						</tr>
 						<tr>
@@ -140,7 +140,7 @@
 								<label>Haptische Wiedergabetreue:</label>
 							</td>
 							<td>
-								<input type="range" id="HapFid_Prot" name="HapFid_Prot" min="0" max="100"><label class="prot_labels">Value: <span id="demo_HapFid_Prot"></span></label>
+								<input type="range" id="HapFid_Prot" name="HapFid_Prot" min="0" max="100"><button class="btn" onclick="HapFid_Prot_Zero()" id="zero-HapFid_Prot"><i class="fa fa-trash"></i></button><label class="prot_labels">Value: <span id="demo_HapFid_Prot"></span></label>
 							</td>
 						</tr>
 						<tr>
@@ -148,7 +148,7 @@
 								<label>Funktionstiefe:</label>
 							</td>
 							<td>
-								<input type="range" id="Funktionstiefe" name="Funktionstiefe" min="0" max="100"><label class="prot_labels">Value: <span id="demo_Funktionstiefe"></span></label>
+								<input type="range" id="Funktionstiefe" name="Funktionstiefe" min="0" max="100"><button class="btn" onclick="Funktionstiefe_Zero()" id="zero-Funktionstiefe"><i class="fa fa-trash"></i></button><label class="prot_labels">Value: <span id="demo_Funktionstiefe"></span></label>
 							</td>
 						</tr>
 						<tr>
@@ -156,7 +156,7 @@
 								<label>Funktionsumfang:</label>
 							</td>
 							<td>
-								<input type="range" id="Funktionsumfang" name="Funktionsumfang" min="0" max="100"><label class="prot_labels">Value: <span id="demo_Funktionsumfang"></span></label>
+								<input type="range" id="Funktionsumfang" name="Funktionsumfang" min="0" max="100"><button class="btn" onclick="Funktionsumfang_Zero()" id="zero-Funktionsumfang"><i class="fa fa-trash"></i></button><label class="prot_labels">Value: <span id="demo_Funktionsumfang"></span></label>
 							</td>
 						</tr>
 						<tr>
@@ -164,7 +164,7 @@
 								<label>Eingabeverhalten:</label>
 							</td>
 							<td>
-								<input type="range" id="Eingabeverhalten" name="Eingabeverhalten" min="0" max="100"><label class="prot_labels">Value: <span id="demo_Eingabeverhalten"></span></label>
+								<input type="range" id="Eingabeverhalten" name="Eingabeverhalten" min="0" max="100"><button class="btn" onclick="Eingabeverhalten_Zero()" id="zero-Eingabeverhalten"><i class="fa fa-trash"></i></button>	<label class="prot_labels">Value: <span id="demo_Eingabeverhalten"></span></label>
 							</td>
 						</tr>
 						<tr>
@@ -172,7 +172,7 @@
 								<label>Ausgabeverhalten:</label>
 							</td>
 							<td>
-								<input type="range" id="Ausgabeverhalten" name="Ausgabeverhalten" min="0" max="100"><label class="prot_labels">Value: <span id="demo_Ausgabeverhalten"></span></label>
+								<input type="range" id="Ausgabeverhalten" name="Ausgabeverhalten" min="0" max="100"><button class="btn" onclick="Ausgabeverhalten_Zero()" id="zero-Ausgabeverhalten"><i class="fa fa-trash"></i></button> <label class="prot_labels">Value: <span id="demo_Ausgabeverhalten"></span></label>
 							</td>
 						</tr>
 					</table>
