@@ -312,3 +312,72 @@ function save_settings(parameter){
     message.innerHTML  = "Stellen Sie sicher, dass die Summe aller Gewichte genau gleich 100 % ist";
   }
 }
+
+function Cost_Meth_Zero(){
+  Cost_Meth.value = 0;
+  output_Cost_Meth.innerHTML = Cost_Meth.value;
+}
+
+function Vorbereitungszeit_Zero(){
+  Vorbereitungszeit.value = 0;
+  output_Vorbereitungszeit.innerHTML = Vorbereitungszeit.value;
+}
+
+function Ausführungszeit_Zero(){
+  Ausführungszeit.value = 0;
+  output_Ausführungszeit.innerHTML = Ausführungszeit.value;
+}
+
+function Personananzahl_Zero(){
+  Personananzahl.value = 0;
+  output_Personananzahl.innerHTML = Personananzahl.value;
+}
+function Evidenz_Zero(){
+  Evidenz.value = 0;
+  output_Evidenz.innerHTML = Evidenz.value;
+}
+
+function Budget_Prot_Zero(){
+  Budget_Prot.value = 0;
+  output_Budget_Prot.innerHTML = Budget_Prot.value;
+}
+
+function Zeit_Prot_Zero(){
+  Zeit_Prot.value = 0;
+  output_Zeit_Prot.innerHTML = Zeit_Prot.value;
+}
+
+function VisFid_Prot_Zero(){
+  VisFid_Prot.value = 0;
+  output_VisFid_Prot.innerHTML = VisFid_Prot.value;
+}
+
+function AudFid_Prot_Zero(){
+  AudFid_Prot.value = 0;
+  output_AudFid_Prot.innerHTML = AudFid_Prot.value;
+}
+
+function HapFid_Prot_Zero(){
+  HapFid_Prot.value = 0;
+  output_HapFid_Prot.innerHTML = HapFid_Prot.value;
+}
+
+function Funktionstiefe_Zero(){
+  Funktionstiefe.value = 0;
+  output_Funktionstiefe.innerHTML = Funktionstiefe.value;
+}
+
+function Funktionsumfang_Zero(){
+  Funktionsumfang.value = 0;
+  output_Funktionsumfang.innerHTML = Funktionsumfang.value;
+}
+
+function Eingabeverhalten_Zero(){
+  Eingabeverhalten.value = 0;
+  output_Eingabeverhalten.innerHTML = Eingabeverhalten.value;
+}
+
+function Ausgabeverhalten_Zero(){
+  Ausgabeverhalten.value = 0;
+  output_Ausgabeverhalten.innerHTML = Ausgabeverhalten.value;
+}
